@@ -14111,8 +14111,8 @@ xclip
 }
 @media (max-width: 450px) {
   .header-one-wrapper .left-side-header .logo-area img {
-    max-height: 40px;
-    padding: 12px 0;
+    max-height: 80px;
+    padding: 5px 0;
     width: 130px;
   }
 }
