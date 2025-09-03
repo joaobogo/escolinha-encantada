@@ -39,7 +39,7 @@
 
 <body>
 
-  <!-- header style one -->
+<!-- header style one -->
 <header class="header-one header--sticky header-default">
     <div class="header-top-one-wrapper">
         <div class="container">
@@ -80,7 +80,7 @@
                     <div class="buttons-area">
                         <a href="https://hotmart.com/pt-br/marketplace/produtos/escolinha-encantada/M99095302B" class="rts-btn btn-primary">Comece agora mesmo!</a>
                     </div>
-                    <!-- Hamburger menu removed -->
+                    <!-- Hamburger menu (kept removed) -->
                 </div>
             </div>
         </div>
@@ -88,12 +88,57 @@
 </header>
 <!-- header style end -->
 
-<!-- custom mobile fix -->
+<!-- mobile header overrides -->
 <style>
+/* General small-screen header tightening */
 @media (max-width: 767.98px) {
-  .header-one .logo-area img {
-    max-width: 200px; /* doubled logo size */
+  /* Make the header row a proper flex bar with space for CTA */
+  .header-one .header-one-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
+
+  /* Enlarge logo on mobile */
+  .header-one .logo-area img {
+    max-width: 180px;   /* ~2x common theme size; tweak if needed */
+    height: auto;
+  }
+
+  /* Some themes hide button containers on mobile — force show */
+  .header-one .header-right-area-one .buttons-area {
+    display: block !important;
+  }
+
+  /* Ensure the CTA is visible and sized similarly to the logo height */
+  .header-one .header-right-area-one .rts-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    padding: 10px 14px;
+    font-size: 14px;
+    line-height: 1.1;
+  }
+
+  /* Remove hamburger completely if any leftover styles exist */
+  .header-one .menu-btn { 
+    display: none !important; 
+  }
+
+  /* Hide empty nav to free space (you’re not using it) */
+  .header-one .main-nav-one { 
+    display: none; 
+  }
+}
+
+/* Optional: slightly larger on very small phones if you want */
+@media (max-width: 360px) {
+  .header-one .logo-area img { max-width: 160px; }
+  .header-one .header-right-area-one .rts-btn { font-size: 13px; padding: 9px 12px; }
 }
 </style>
 
