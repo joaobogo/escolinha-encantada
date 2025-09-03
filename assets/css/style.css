@@ -53,11 +53,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   /* === Brand Accent Colors === */
-  --color-brand-yellow: #FFD335;   /* Main call-to-action */
-  --color-brand-purple: #B54CCA;   /* Highlights, buttons */
-  --color-brand-red: #FF4E41;      /* Alert, hover states */
-  --color-brand-blue: #36348E;     /* Strong accent or links */
-  --color-brand-green: #09A24F;    /* Success or playful accents */
+  --color-brand-yellow: #FEDA00;   /* Main call-to-action */
+  --color-brand-purple: #76107E;   /* Highlights, buttons */
+  --color-brand-red: #fe007a;      /* Alert, hover states */
+  --color-brand-blue: #01d3f1;     /* Strong accent or links */
+  --color-brand-green: #97e714;    /* Success or playful accents */
 
   /* === Primary System Colors (overriding subtly) === */
   --color-primary: var(--color-brand-yellow);
@@ -151,6 +151,7 @@ html {
   overflow-y: auto;
   scroll-behavior: auto !important;
 }
+
 
 body {
   font-size: var(--font-size-b2);
