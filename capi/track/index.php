@@ -2,6 +2,11 @@
 // capi/track/index.php  (Option 3: hardcode secrets here)
 // SECURITY: This endpoint only accepts POST and returns JSON.
 
+// Prefer environment variables; fallback to hardcoded values if not set
+$FB_PIXEL_ID   = getenv('FB_PIXEL_ID')   ?: '1200423845416419';
+$FB_CAPI_TOKEN = getenv('FB_CAPI_TOKEN') ?: 'EAAH2T5l7sGEBO4ay3keTOKqU0KZCTVG74YD8dNY90dFKdZBmXZAf5CIZB4DnFJLe5yrDIt1zYT0HuMzcPOJVfHUmERR61WuiQGb80PFjRZB8Wb4IjJ5A5g6IUjKhqmuFO16EGNyb5TXnXt4ZCa5uommqbj7E46PqzdgUGDsyuRqtysjn1t8RizIAEKZAOZA0nMvFugZDZD';
+
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   http_response_code(405);
   header('Content-Type: application/json');
