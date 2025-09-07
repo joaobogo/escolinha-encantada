@@ -1,1171 +1,1045 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Escolinha Encantada | Alfabetização Infantil Lúdica</title>
-    <meta name="description"
-        content="Alfabetização divertida e eficiente: 20 videoaulas lúdicas + 20 apostilas interativas, acesso vitalício e acompanhamento do Prof. Leo Leão. Desenvolvido por psicopedagoga com supervisão fonoaudiológica.">
-    <meta name="keywords"
-        content="alfabetização infantil, curso para crianças, aprender a ler, escolinha encantada, educação lúdica, ensino divertido, videoaulas, apostilas interativas, leo leão">
-    <meta name="author" content="Escolinha Encantada">
+  <title>Escolinha Encantada | Alfabetização Infantil Lúdica</title>
+  <meta name="description" content="Alfabetização divertida e eficiente: 20 videoaulas lúdicas + 20 apostilas interativas, acesso vitalício e acompanhamento do Prof. Leo Leão. Desenvolvido por psicopedagoga com supervisão fonoaudiológica.">
+  <meta name="keywords" content="alfabetização infantil, curso para crianças, aprender a ler, escolinha encantada, educação lúdica, ensino divertido, videoaulas, apostilas interativas, leo leão">
+  <meta name="author" content="Escolinha Encantada">
 
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png">
 
-    <!-- FontAwesome 6.4.2 -->
-    <link rel="stylesheet" href="assets/css/plugins/fontawesome-6.css">
+  <!-- FontAwesome 6.4.2 -->
+  <link rel="stylesheet" href="assets/css/plugins/fontawesome-6.css">
+  <!-- Swiper 10.2.0 -->
+  <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
+  <!-- Bootstrap 5.0.2 -->
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+  <!-- jQuery UI -->
+  <link rel="stylesheet" href="assets/css/vendor/jquery-ui.css">
+  <!-- MetisMenu -->
+  <link rel="stylesheet" href="assets/css/vendor/metismenu.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Swiper 10.2.0 -->
-    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
-
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
-
-    <!-- Bootstrap 5.0.2 -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-
-    <!-- jQuery UI -->
-    <link rel="stylesheet" href="assets/css/vendor/jquery-ui.css">
-
-    <!-- MetisMenu -->
-    <link rel="stylesheet" href="assets/css/vendor/metismenu.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Meta Pixel Code -->
+  <script>
+    // Your public Pixel ID (safe in browser)
+    const META_PIXEL_ID = '1200423845416419';
+  </script>
+  <script>
+    (function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)})(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    if (META_PIXEL_ID) {
+      fbq('init', META_PIXEL_ID);
+      fbq('track', 'PageView');
+    }
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1200423845416419&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 
-
 <body>
-
-<!-- header style one -->
-<header class="header-one header--sticky header-default">
+  <!-- header style one -->
+  <header class="header-one header--sticky header-default">
     <div class="header-top-one-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="header-top-one">
-                        <div class="left-information"></div>
-                        <div class="right-information">
-                            <ul class="social-area">
-                                <li>
-                                    <a href="#">
-                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0306 1.89513C10.2398 1.859 10.0026 1.85137 8 1.85137V1.85131C5.99744 1.85131 5.76019 1.859 4.96938 1.89506C4.49378 1.90072 4.02269 1.98808 3.57669 2.15331C3.25324 2.27812 2.9595 2.46925 2.71436 2.7144C2.46922 2.95955 2.27811 3.2533 2.15331 3.57675C1.98808 4.02276 1.90072 4.49384 1.89506 4.96944C1.85894 5.76025 1.85131 5.9975 1.85131 8.00006C1.85131 10.0026 1.859 10.2399 1.89506 11.0307C1.90072 11.5063 1.98808 11.9774 2.15331 12.4234C2.27812 12.7468 2.46923 13.0405 2.71437 13.2857C2.95951 13.5308 3.25325 13.7219 3.57669 13.8467C4.02269 14.012 4.49378 14.0993 4.96938 14.105C5.76013 14.1411 5.99725 14.1487 8 14.1487C10.0028 14.1487 10.2399 14.1411 11.0306 14.105C11.5062 14.0993 11.9773 14.012 12.4233 13.8467C12.7467 13.7219 13.0405 13.5308 13.2856 13.2857C13.5308 13.0405 13.7219 12.7468 13.8467 12.4234C14.0119 11.9774 14.0993 11.5063 14.1049 11.0307C14.1411 10.2399 14.1487 10.0026 14.1487 8.00006C14.1487 5.9975 14.141 5.76025 14.1049 4.96944C14.0993 4.49384 14.0119 4.02276 13.8467 3.57675C13.7219 3.25331 13.5308 2.95958 13.2856 2.71444C13.0405 2.4693 12.7467 2.27818 12.4233 2.15338C11.9773 1.98814 11.5062 1.90079 11.0306 1.89513Z" fill="white" />
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="header-top-one">
+              <div class="left-information"></div>
+              <div class="right-information">
+                <ul class="social-area">
+                  <li>
+                    <a href="#">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0306 1.89513C10.2398 1.859 10.0026 1.85137 8 1.85137V1.85131C5.99744 1.85131 5.76019 1.859 4.96938 1.89506C4.49378 1.90072 4.02269 1.98808 3.57669 2.15331C3.25324 2.27812 2.9595 2.46925 2.71436 2.7144C2.46922 2.95955 2.27811 3.2533 2.15331 3.57675C1.98808 4.02276 1.90072 4.49384 1.89506 4.96944C1.85894 5.76025 1.85131 5.9975 1.85131 8.00006C1.85131 10.0026 1.859 10.2399 1.89506 11.0307C1.90072 11.5063 1.98808 11.9774 2.15331 12.4234C2.27812 12.7468 2.46923 13.0405 2.71437 13.2857C2.95951 13.5308 3.25325 13.7219 3.57669 13.8467C4.02269 14.012 4.49378 14.0993 4.96938 14.105C5.76013 14.1411 5.99725 14.1487 8 14.1487C10.0028 14.1487 10.2399 14.1411 11.0306 14.105C11.5062 14.0993 11.9773 14.012 12.4233 13.8467C12.7467 13.7219 13.0405 13.5308 13.2856 13.2857C13.5308 13.0405 13.7219 12.7468 13.8467 12.4234C14.0119 11.9774 14.0993 11.5063 14.1049 11.0307C14.1411 10.2399 14.1487 10.0026 14.1487 8.00006C14.1487 5.9975 14.141 5.76025 14.1049 4.96944C14.0993 4.49384 14.0119 4.02276 13.8467 3.57675C13.7219 3.25331 13.5308 2.95958 13.2856 2.71444C13.0405 2.4693 12.7467 2.27818 12.4233 2.15338C11.9773 1.98814 11.5062 1.90079 11.0306 1.89513Z" fill="white" />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <div class="header-main">
-        <div class="container">
-            <div class="header-one-wrapper">
-                <div class="left-side-header">
-                    <a href="index.html" class="logo-area">
-                        <img src="assets/images/logo/logo-1.png" alt="logo">
-                    </a>
-                </div>
+      <div class="container">
+        <div class="header-one-wrapper">
+          <div class="left-side-header">
+            <a href="index.html" class="logo-area">
+              <img src="assets/images/logo/logo-1.png" alt="logo">
+            </a>
+          </div>
 
-                <div class="main-nav-one">
-                    <nav></nav>
-                </div>
+          <div class="main-nav-one">
+            <nav></nav>
+          </div>
 
-                <div class="header-right-area-one">
-                    <div class="buttons-area">
-                        <a href="https://hotmart.com/pt-br/marketplace/produtos/escolinha-encantada/M99095302B" class="rts-btn btn-primary">Comece agora mesmo!</strong></a>
-                    </div>
-                    <!-- Hamburger menu (kept removed) -->
-                </div>
+          <div class="header-right-area-one">
+            <div class="buttons-area">
+              <a href="https://hotmart.com/pt-br/marketplace/produtos/escolinha-encantada/M99095302B" class="rts-btn btn-primary">Comece agora mesmo!</a>
             </div>
+            <!-- Hamburger menu (kept removed) -->
+          </div>
         </div>
+      </div>
     </div>
-</header>
-<!-- header style end -->
+  </header>
+  <!-- header style end -->
 
-<!-- mobile header overrides -->
-<style>
-/* General small-screen header tightening */
-@media (max-width: 767.98px) {
-  /* Make the header row a proper flex bar with space for CTA */
-  .header-one .header-one-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
+  <!-- mobile header overrides -->
+  <style>
+    @media (max-width: 767.98px) {
+      .header-one .header-one-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      .header-one .logo-area img { max-width: 180px; height: auto; }
+      .header-one .header-right-area-one .buttons-area { display: block !important; }
+      .header-one .header-right-area-one .rts-btn {
+        display: inline-flex; align-items: center; justify-content: center;
+        white-space: nowrap; padding: 10px 14px; font-size: 14px; line-height: 1.1;
+      }
+      .header-one .menu-btn { display: none !important; }
+      .header-one .main-nav-one { display: none; }
+    }
+    @media (max-width: 360px) {
+      .header-one .logo-area img { max-width: 160px; }
+      .header-one .header-right-area-one .rts-btn { font-size: 13px; padding: 9px 12px; }
+    }
+  </style>
 
-  /* Enlarge logo on mobile */
-  .header-one .logo-area img {
-    max-width: 180px;   /* ~2x common theme size; tweak if needed */
-    height: auto;
-  }
-
-  /* Some themes hide button containers on mobile — force show */
-  .header-one .header-right-area-one .buttons-area {
-    display: block !important;
-  }
-
-  /* Ensure the CTA is visible and sized similarly to the logo height */
-  .header-one .header-right-area-one .rts-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    padding: 10px 14px;
-    font-size: 14px;
-    line-height: 1.1;
-  }
-
-  /* Remove hamburger completely if any leftover styles exist */
-  .header-one .menu-btn { 
-    display: none !important; 
-  }
-
-  /* Hide empty nav to free space (you’re not using it) */
-  .header-one .main-nav-one { 
-    display: none; 
-  }
-}
-
-/* Optional: slightly larger on very small phones if you want */
-@media (max-width: 360px) {
-  .header-one .logo-area img { max-width: 160px; }
-  .header-one .header-right-area-one .rts-btn { font-size: 13px; padding: 9px 12px; }
-}
-</style>
-
-
-
-<!-- banner area start -->
-<section class="banner-area-one rts-shape-move"  style="background-image: url('assets/images/banner/my-background.jpg'); 
-           background-size: cover; 
-           background-position: center;"> >
+  <!-- banner area start -->
+  <section class="banner-area-one rts-shape-move" style="background-image: url('assets/images/banner/my-background.jpg'); background-size: cover; background-position: center;">
     <div class="container">
-        <div class="row">
-            <!-- Left Banner Content -->
-            <div class="col-lg-6 order-1 order-lg-1">
-                <div class="banner-content-one">
-                    <div class="inner">
-                        <h1 class="title-banner">
-                            Alfabetização divertida e eficiente <br> com a <span>Escolinha Encantada</span>
-                            <img src="assets/images/banner/title-shape-1.svg" alt="banner">
-                        </h1>
-                        <p class="disc">
-                            20 videoaulas lúdicas + 20 apostilas interativas, acesso vitalício e o carinho do Prof. Leo Leão — método criado por psicopedagoga com supervisão fonoaudiológica.
-                        </p>
-                        <div class="banner-btn">
-                            <a href="https://hotmart.com/pt-br/marketplace/produtos/escolinha-encantada/M99095302B" class="rts-btn btn-primary border-radius">
-                                Começar Agora
-                            </a>
-                            <div class="video-btn-area">
-                                <div class="vedio-icone">
-                                    <a class="video-play-button play-video popup-video"
-                                        href="https://www.youtube.com/watch?v=_5OfBuUE-dI">
-                                        <span class="icon"><img src="assets/images/banner/play.svg" alt="Play Icon"></span>
-                                    </a>
-                                    <div class="video-overlay">
-                                        <a class="video-overlay-close">×</a>
-                                    </div>
-                                </div>
-                                <p class="intro">Ver aula</p>
-                            </div>
-                        </div>
-                    </div>
+      <div class="row">
+        <!-- Left Banner Content -->
+        <div class="col-lg-6 order-1 order-lg-1">
+          <div class="banner-content-one">
+            <div class="inner">
+              <h1 class="title-banner">
+                Alfabetização divertida e eficiente <br> com a <span>Escolinha Encantada</span>
+                <img src="assets/images/banner/title-shape-1.svg" alt="banner">
+              </h1>
+              <p class="disc">
+                20 videoaulas lúdicas + 20 apostilas interativas, acesso vitalício e o carinho do Prof. Leo Leão — método criado por psicopedagoga com supervisão fonoaudiológica.
+              </p>
+              <div class="banner-btn">
+                <a href="https://hotmart.com/pt-br/marketplace/produtos/escolinha-encantada/M99095302B" class="rts-btn btn-primary border-radius">
+                  Começar Agora
+                </a>
+                <div class="video-btn-area">
+                  <div class="vedio-icone">
+                    <a class="video-play-button play-video popup-video" href="https://www.youtube.com/watch?v=_5OfBuUE-dI">
+                      <span class="icon"><img src="assets/images/banner/play.svg" alt="Play Icon"></span>
+                    </a>
+                    <div class="video-overlay"><a class="video-overlay-close">×</a></div>
+                  </div>
+                  <p class="intro">Ver aula</p>
                 </div>
+              </div>
             </div>
-
-            <!-- Right Banner Image -->
-            <div class="col-lg-6 order-2 order-lg-2">
-                <div class="banner-right-img">
-                    <img src="assets/images/banner/01.png" width="672" alt="Escolinha Encantada">
-                </div>
-            </div>
+          </div>
         </div>
+
+        <!-- Right Banner Image -->
+        <div class="col-lg-6 order-2 order-lg-2">
+          <div class="banner-right-img">
+            <img src="assets/images/banner/01.png" width="672" alt="Escolinha Encantada">
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Shapes & Background -->
     <img class="banner-bg-shape-2" src="assets/images/banner/banner-bg-1.png" alt="">
     <div class="shape-image">
-        <div class="shape one" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/01.svg" alt=""></div>
-        <div class="shape two" data-speed="0.04"><img src="assets/images/banner/shape/02.svg" alt=""></div>
-        <div class="shape three" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/03.svg" alt=""></div>
-        <div class="shape four" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/04.svg" alt=""></div>
-        <div class="shape five" data-speed="0.04"><img src="assets/images/banner/shape/05.svg" alt=""></div>
-        <div class="shape six" data-speed="0.04"><img src="assets/images/banner/shape/06.svg" alt=""></div>
-        <div class="shape seven" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/07.svg" alt=""></div>
+      <div class="shape one" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/01.svg" alt=""></div>
+      <div class="shape two" data-speed="0.04"><img src="assets/images/banner/shape/02.svg" alt=""></div>
+      <div class="shape three" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/03.svg" alt=""></div>
+      <div class="shape four" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/04.svg" alt=""></div>
+      <div class="shape five" data-speed="0.04"><img src="assets/images/banner/shape/05.svg" alt=""></div>
+      <div class="shape six" data-speed="0.04"><img src="assets/images/banner/shape/06.svg" alt=""></div>
+      <div class="shape seven" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/07.svg" alt=""></div>
     </div>
     <div class="banner-bg-grid-shape"></div>
-</section>
-<!-- banner area end -->
+  </section>
+  <!-- banner area end -->
 
-<!-- mobile tweaks: header/logo size, header-to-banner spacing, and banner gap -->
-<style>
-@media (max-width: 767.98px) {
-  /* Bigger logo and tighter header */
-  .header-one .header-main {
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-  .header-one .logo-area img {
-    max-height: 56px; /* increase logo size on mobile */
-    height: auto;
-    width: auto;
-  }
-  .header-right-area-one .buttons-area .rts-btn {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-  .menu-btn svg {
-    width: 24px;
-    height: 20px;
-  }
+  <!-- mobile tweaks: header/logo size, header-to-banner spacing, and banner gap -->
+  <style>
+    @media (max-width: 767.98px) {
+      .header-one .header-main { padding-top: 8px; padding-bottom: 8px; }
+      .header-one .logo-area img { max-height: 56px; height: auto; width: auto; }
+      .header-right-area-one .buttons-area .rts-btn { padding: 8px 14px; font-size: 14px; }
+      .menu-btn svg { width: 24px; height: 20px; }
+      .banner-area-one { padding-top: 8px; }
+      .banner-area-one .title-banner { margin-top: 0; margin-bottom: 12px; }
+      .banner-area-one .banner-content-one { margin-bottom: 16px; }
+      .banner-area-one .banner-right-img { margin-top: -100px; }
+    }
+  </style>
 
-  /* Reduce space from header to banner title */
-  .banner-area-one {
-    padding-top: 8px; /* tighten vertical space under header */
-  }
-  .banner-area-one .title-banner {
-    margin-top: 0;
-    margin-bottom: 12px; /* slightly tighter below the title */
-  }
-
-  /* Keep smaller gap between text and image in the banner */
-  .banner-area-one .banner-content-one {
-    margin-bottom: 16px; /* reduce big gap under text */
-  }
-  .banner-area-one .banner-right-img {
-    margin-top: -100px; /* no extra gap above image */
-  }
-}
-</style>
-
-
-<!-- about area start -->
-<section class="rts-about-area rts-shape-move rts-section-gap">
+  <!-- about area start -->
+  <section class="rts-about-area rts-shape-move rts-section-gap">
     <div class="container">
-        <div class="section-inner">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="about-image">
-                        <img src="assets/images/about/about-01.png" width="630" alt="Personagens lúdicos em aula de alfabetização">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-content">
-                        <div class="section-title-area">
-                            <p class="pre-title"><img src="assets/images/banner/title-img.svg" alt="">Sobre a Escolinha</p>
-                            <h2 class="section-title">Bem-vindo ao mundo mágico da <br> Escolinha Encantada</h2>
-                            <p class="desc">Cada aula é uma aventura com personagens que prendem a atenção e transformam o aprender a ler em um momento leve, afetivo e inesquecível.</p>
-                        </div>
-                        <ul class="about-wrapper">
-                            <li class="wrapper-list">
-                                <div class="list-inner">
-                                    <div class="icon" ><img style="filter: brightness(0) saturate(100%);" src="assets/images/icon/01.svg" alt="" ></div>
-                                    <div class="content">
-                                        <h4 class="title" style="color: black;">Metodologia Lúdica</h4>
-                                        <p class="desc" style="color:black;">Com o Prof. Leo Leão e amigos, seu filho aprende com histórias, músicas e atividades interativas que fazem sentido para a infância.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="wrapper-list">
-                                <div class="list-inner">
-                                    <div class="icon"><img src="assets/images/icon/02.svg" alt=""></div>
-                                    <div class="content">
-                                        <h4 class="title">Equipe Especializada</h4>
-                                        <p class="desc">Conteúdo criado por psicopedagoga e supervisionado por fonoaudióloga para garantir um aprendizado correto, leve e eficaz.</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="about-btn-area">
-                            <a href="https://hotmart.com/pt-br/marketplace/produtos/escolinha-encantada/M99095302B" class="rts-btn btn-primary border-radius">Saiba mais</a>
-                        </div>
-                    </div>
-                </div>
+      <div class="section-inner">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="about-image">
+              <img src="assets/images/about/about-01.png" width="630" alt="Personagens lúdicos em aula de alfabetização">
             </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-content">
+              <div class="section-title-area">
+                <p class="pre-title"><img src="assets/images/banner/title-img.svg" alt="">Sobre a Escolinha</p>
+                <h2 class="section-title">Bem-vindo ao mundo mágico da <br> Escolinha Encantada</h2>
+                <p class="desc">Cada aula é uma aventura com personagens que prendem a atenção e transformam o aprender a ler em um momento leve, afetivo e inesquecível.</p>
+              </div>
+              <ul class="about-wrapper">
+                <li class="wrapper-list">
+                  <div class="list-inner">
+                    <div class="icon"><img style="filter: brightness(0) saturate(100%);" src="assets/images/icon/01.svg" alt=""></div>
+                    <div class="content">
+                      <h4 class="title" style="color: black;">Metodologia Lúdica</h4>
+                      <p class="desc" style="color:black;">Com o Prof. Leo Leão e amigos, seu filho aprende com histórias, músicas e atividades interativas que fazem sentido para a infância.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="wrapper-list">
+                  <div class="list-inner">
+                    <div class="icon"><img src="assets/images/icon/02.svg" alt=""></div>
+                    <div class="content">
+                      <h4 class="title">Equipe Especializada</h4>
+                      <p class="desc">Conteúdo criado por psicopedagoga e supervisionado por fonoaudióloga para garantir um aprendizado correto, leve e eficaz.</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="about-btn-area">
+                <a href="https://hotmart.com/pt-br/marketplace/produtos/escolinha-encantada/M99095302B" class="rts-btn btn-primary border-radius">Saiba mais</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <div class="shape-image">
-        <div class="shape one" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/08.svg" alt="shape_image"></div>
-        <div class="shape two" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/09.svg" alt="shape_image"></div>
-        <div class="shape three" data-speed="0.04"><img src="assets/images/banner/shape/10.svg" alt="shape_image"></div>
+      <div class="shape one" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/08.svg" alt="shape_image"></div>
+      <div class="shape two" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/09.svg" alt="shape_image"></div>
+      <div class="shape three" data-speed="0.04"><img src="assets/images/banner/shape/10.svg" alt="shape_image"></div>
     </div>
-</section>
+  </section>
 
   <!-- values/ideals area start -->
-<section class="rts-programs-area rts-section-gap section-bg2">
+  <section class="rts-programs-area rts-section-gap section-bg2">
     <div class="container">
-        <div class="section-title-area-style-2">
-            <div class="left-area">
-                <p class="pre-title"><img src="assets/images/banner/title-img.svg" alt="">Nossos Valores</p>
-                <h2 class="section-title">Pilares da Nossa Atuação</h2>
-            </div>
-            <div class="right-area">
-                <p class="desc">Uma proposta que coloca a criança no centro, com princípios pedagógicos claros e profissionais que acompanham cada etapa.</p>
-            </div>
+      <div class="section-title-area-style-2">
+        <div class="left-area">
+          <p class="pre-title"><img src="assets/images/banner/title-img.svg" alt="">Nossos Valores</p>
+          <h2 class="section-title">Pilares da Nossa Atuação</h2>
         </div>
-        <div class="section-inner">
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
-                    <div class="programs-wrapper">
-                        <div class="wrapper-inner">
-                            <div class="image">
-                                <img class="main" src="assets/images/course/24.jpg" alt="">
-                                <div class="shape-icon bg-one">
-                                    <img src="assets/images/icon/34.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h4 class="title"><a href="#">Apoio Multidisciplinar</a></h4>
-                                <p class="desc">Psicopedagogia e fonoaudiologia juntas para um desenvolvimento individualizado, respeitoso e consistente.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="programs-wrapper">
-                        <div class="wrapper-inner">
-                            <div class="image">
-                                <img class="main" src="assets/images/course/25.jpg" alt="">
-                                <div class="shape-icon bg-four">
-                                    <img src="assets/images/icon/35.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h4 class="title"><a href="#">Encantamento com Propósito</a></h4>
-                                <p class="desc">Personagens, músicas e atividades planejados com intencionalidade pedagógica para aprender brincando.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="programs-wrapper">
-                        <div class="wrapper-inner">
-                            <div class="image">
-                                <img class="main" src="assets/images/course/26.jpg" alt="">
-                                <div class="shape-icon bg-two">
-                                    <img src="assets/images/icon/36.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h4 class="title"><a href="#">Desenvolvimento Integral</a></h4>
-                                <p class="desc">Cognitivo, emocional e social caminhando juntos — formando crianças confiantes, curiosas e felizes.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="right-area">
+          <p class="desc">Uma proposta que coloca a criança no centro, com princípios pedagógicos claros e profissionais que acompanham cada etapa.</p>
         </div>
+      </div>
+      <div class="section-inner">
+        <div class="row g-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="programs-wrapper">
+              <div class="wrapper-inner">
+                <div class="image">
+                  <img class="main" src="assets/images/course/24.jpg" alt="">
+                  <div class="shape-icon bg-one">
+                    <img src="assets/images/icon/34.svg" alt="">
+                  </div>
+                </div>
+                <div class="content">
+                  <h4 class="title"><a href="#">Apoio Multidisciplinar</a></h4>
+                  <p class="desc">Psicopedagogia e fonoaudiologia juntas para um desenvolvimento individualizado, respeitoso e consistente.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="programs-wrapper">
+              <div class="wrapper-inner">
+                <div class="image">
+                  <img class="main" src="assets/images/course/25.jpg" alt="">
+                  <div class="shape-icon bg-four">
+                    <img src="assets/images/icon/35.svg" alt="">
+                  </div>
+                </div>
+                <div class="content">
+                  <h4 class="title"><a href="#">Encantamento com Propósito</a></h4>
+                  <p class="desc">Personagens, músicas e atividades planejados com intencionalidade pedagógica para aprender brincando.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="programs-wrapper">
+              <div class="wrapper-inner">
+                <div class="image">
+                  <img class="main" src="assets/images/course/26.jpg" alt="">
+                  <div class="shape-icon bg-two">
+                    <img src="assets/images/icon/36.svg" alt="">
+                  </div>
+                </div>
+                <div class="content">
+                  <h4 class="title"><a href="#">Desenvolvimento Integral</a></h4>
+                  <p class="desc">Cognitivo, emocional e social caminhando juntos — formando crianças confiantes, curiosas e felizes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
-<!-- values/ideals area end -->
- 
-<!-- service area start -->
-<section class="rts-service-area v-2 rts-section-gap">
+  </section>
+  <!-- values/ideals area end -->
+
+  <!-- service area start -->
+  <section class="rts-service-area v-2 rts-section-gap">
     <div class="container">
-        <div class="section-title-area text-center">
-            <p class="pre-title justify-content-center"><img src="assets/images/banner/title-img.svg" alt="">Nossos Serviços</p>
-            <h2 class="section-title">Oferecemos o Melhor Para <br> Seu Filho</h2>
-        </div>
-        <div class="section-inner">
-            <div class="row g-5 justify-content-between">
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <ul class="service-wrapper-style-2">
-                        <li class="wrapper-list">
-                            <div class="icon bg-two">
-                                <img src="assets/images/icon/37.svg" alt="Ícone de Aulas Lúdicas">
-                            </div>
-                            <div class="text">
-                                <a href="program-details.html">
-                                    <h4 class="heading-title color-two">Aulas Lúdicas</h4>
-                                </a>
-                                <p class="desc">Leitura e escrita por meio de brincadeiras, histórias e desafios que mantêm a criança engajada.</p>
-                            </div>
-                        </li>
-                        <li class="wrapper-list">
-                            <div class="icon bg-four">
-                                <img src="assets/images/icon/38.svg" alt="Ícone de Personagens">
-                            </div>
-                            <div class="text">
-                                <a href="program-details.html">
-                                    <h4 class="heading-title color-four">Personagens que Educam</h4>
-                                </a>
-                                <p class="desc">O Prof. Leo Leão conduz a jornada com carisma e leveza — aprender vira uma aventura encantada.</p>
-                            </div>
-                        </li>
-                        <li class="wrapper-list">
-                            <div class="icon bg-three">
-                                <img src="assets/images/icon/39.svg" alt="Ícone de Metodologia Interativa">
-                            </div>
-                            <div class="text">
-                                <a href="program-details.html">
-                                    <h4 class="heading-title color-three">Metodologia Interativa</h4>
-                                </a>
-                                <p class="desc">Apostilas e jogos pedagógicos andam com as videoaulas para fixar conteúdo com prazer.</p>
-                            </div>
-                        </li>
-                    </ul>
+      <div class="section-title-area text-center">
+        <p class="pre-title justify-content-center"><img src="assets/images/banner/title-img.svg" alt="">Nossos Serviços</p>
+        <h2 class="section-title">Oferecemos o Melhor Para <br> Seu Filho</h2>
+      </div>
+      <div class="section-inner">
+        <div class="row g-5 justify-content-between">
+          <div class="col-xl-4 col-lg-6 col-md-6">
+            <ul class="service-wrapper-style-2">
+              <li class="wrapper-list">
+                <div class="icon bg-two">
+                  <img src="assets/images/icon/37.svg" alt="Ícone de Aulas Lúdicas">
                 </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <ul class="service-wrapper-style-2">
-                        <li class="wrapper-list">
-                            <div class="icon bg-two">
-                                <img src="assets/images/icon/40.svg" alt="Ícone de Desenvolvimento Cognitivo">
-                            </div>
-                            <div class="text">
-                                <a href="program-details.html">
-                                    <h4 class="heading-title color-two">Desenvolvimento Cognitivo</h4>
-                                </a>
-                                <p class="desc">Habilidades de leitura e escrita evoluem no ritmo da criança — sem pressa e sem pressão.</p>
-                            </div>
-                        </li>
-                        <li class="wrapper-list">
-                            <div class="icon bg-four">
-                                <img src="assets/images/icon/41.svg" alt="Ícone de Músicas e Rimas">
-                            </div>
-                            <div class="text">
-                                <a href="program-details.html">
-                                    <h4 class="heading-title color-four">Músicas e Rimas</h4>
-                                </a>
-                                <p class="desc">Memorização facilitada com rimas e canções que tornam o estudo mais leve e divertido.</p>
-                            </div>
-                        </li>
-                        <li class="wrapper-list">
-                            <div class="icon bg-three">
-                                <img src="assets/images/icon/42.svg" alt="Ícone de Apoio Personalizado">
-                            </div>
-                            <div class="text">
-                                <a href="program-details.html">
-                                    <h4 class="heading-title color-three">Apoio Personalizado</h4>
-                                </a>
-                                <p class="desc">Equipe especializada acompanhando o progresso para que cada criança avance com segurança.</p>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="text">
+                  <a href="program-details.html"><h4 class="heading-title color-two">Aulas Lúdicas</h4></a>
+                  <p class="desc">Leitura e escrita por meio de brincadeiras, histórias e desafios que mantêm a criança engajada.</p>
                 </div>
-            </div>
-            <div class="service-image-area order-change3">
-                <img src="assets/images/service/service-05.png" width="468" alt="Escolinha Encantada">
-            </div>
+              </li>
+              <li class="wrapper-list">
+                <div class="icon bg-four">
+                  <img src="assets/images/icon/38.svg" alt="Ícone de Personagens">
+                </div>
+                <div class="text">
+                  <a href="program-details.html"><h4 class="heading-title color-four">Personagens que Educam</h4></a>
+                  <p class="desc">O Prof. Leo Leão conduz a jornada com carisma e leveza — aprender vira uma aventura encantada.</p>
+                </div>
+              </li>
+              <li class="wrapper-list">
+                <div class="icon bg-three">
+                  <img src="assets/images/icon/39.svg" alt="Ícone de Metodologia Interativa">
+                </div>
+                <div class="text">
+                  <a href="program-details.html"><h4 class="heading-title color-three">Metodologia Interativa</h4></a>
+                  <p class="desc">Apostilas e jogos pedagógicos andam com as videoaulas para fixar conteúdo com prazer.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6">
+            <ul class="service-wrapper-style-2">
+              <li class="wrapper-list">
+                <div class="icon bg-two">
+                  <img src="assets/images/icon/40.svg" alt="Ícone de Desenvolvimento Cognitivo">
+                </div>
+                <div class="text">
+                  <a href="program-details.html"><h4 class="heading-title color-two">Desenvolvimento Cognitivo</h4></a>
+                  <p class="desc">Habilidades de leitura e escrita evoluem no ritmo da criança — sem pressa e sem pressão.</p>
+                </div>
+              </li>
+              <li class="wrapper-list">
+                <div class="icon bg-four">
+                  <img src="assets/images/icon/41.svg" alt="Ícone de Músicas e Rimas">
+                </div>
+                <div class="text">
+                  <a href="program-details.html"><h4 class="heading-title color-four">Músicas e Rimas</h4></a>
+                  <p class="desc">Memorização facilitada com rimas e canções que tornam o estudo mais leve e divertido.</p>
+                </div>
+              </li>
+              <li class="wrapper-list">
+                <div class="icon bg-three">
+                  <img src="assets/images/icon/42.svg" alt="Ícone de Apoio Personalizado">
+                </div>
+                <div class="text">
+                  <a href="program-details.html"><h4 class="heading-title color-three">Apoio Personalizado</h4></a>
+                  <p class="desc">Equipe especializada acompanhando o progresso para que cada criança avance com segurança.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
+        <div class="service-image-area order-change3">
+          <img src="assets/images/service/service-05.png" width="468" alt="Escolinha Encantada">
+        </div>
+      </div>
     </div>
-</section>
-<!-- service area end -->
+  </section>
+  <!-- service area end -->
 
-
-
-
-<!-- aula destaque start -->
-<section class="rts-about-area area-2 rts-shape-move rts-section-gap section-bg2">
+  <!-- aula destaque start -->
+  <section class="rts-about-area area-2 rts-shape-move rts-section-gap section-bg2">
     <div class="container">
-        <div class="section-inner">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-7">
-                    <div class="about-content area-2">
-                        <div class="section-title-area">
-                            <p class="pre-title">
-                                <img src="assets/images/banner/title-img.svg" alt="">
-                                Aula Destaque
-                            </p>
-                            <h2 class="section-title">
-                                Aula 1: Leo Leão e os Sons
-                            </h2>
-                            <p class="desc">
-                                As crianças conhecem o Prof. Leo Leão e começam a explorar os sons do alfabeto com histórias animadas, músicas e atividades sonoras.
-                            </p>
-                        </div>
-
-                        <div class="about-btn-area">
-                            <a href="https://hotmart.com/pt-br/marketplace/produtos/escolinha-encantada/M99095302B" class="rts-btn btn-primary">
-                               Começar a aprender
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-6 col-lg-5 order-change">
-                    <div class="about-image2">
-                        <img src="assets/images/about/about-02.png" alt="">
-
-                        <div class="video-btn-area">
-                            <div class="vedio-icone">
-                                <a class="video-play-button play-video popup-video"
-                                    href="https://www.youtube.com/watch?v=NvqO4WRAxo8">
-                                    <span class="icon">
-                                        <img src="assets/images/icon/round-shape.svg" width="80" alt="">
-                                    </span>
-                                    <span class="play-icon">
-                                        <img src="assets/images/icon/play.svg" width="32" alt="">
-                                    </span>
-                                </a>
-                                <div class="video-overlay">
-                                    <a class="video-overlay-close">×</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="section-inner">
+        <div class="row align-items-center">
+          <div class="col-xl-6 col-lg-7">
+            <div class="about-content area-2">
+              <div class="section-title-area">
+                <p class="pre-title"><img src="assets/images/banner/title-img.svg" alt="">Aula Destaque</p>
+                <h2 class="section-title">Aula 1: Leo Leão e os Sons</h2>
+                <p class="desc">As crianças conhecem o Prof. Leo Leão e começam a explorar os sons do alfabeto com histórias animadas, músicas e atividades sonoras.</p>
+              </div>
+              <div class="about-btn-area">
+                <a href="https://hotmart.com/pt-br/marketplace/produtos/escolinha-encantada/M99095302B" class="rts-btn btn-primary">Começar a aprender</a>
+              </div>
             </div>
+          </div>
+
+          <div class="col-xl-6 col-lg-5 order-change">
+            <div class="about-image2">
+              <img src="assets/images/about/about-02.png" alt="">
+
+              <div class="video-btn-area">
+                <div class="vedio-icone">
+                  <a class="video-play-button play-video popup-video" href="https://www.youtube.com/watch?v=NvqO4WRAxo8">
+                    <span class="icon"><img src="assets/images/icon/round-shape.svg" width="80" alt=""></span>
+                    <span class="play-icon"><img src="assets/images/icon/play.svg" width="32" alt=""></span>
+                  </a>
+                  <div class="video-overlay"><a class="video-overlay-close">×</a></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
 
         <div class="shape-image">
-            <div class="shape one" data-speed="0.04" data-revert="true">
-                <img src="assets/images/banner/shape/25.svg" alt="shape_image">
-            </div>
-            <div class="shape two" data-speed="0.04" data-revert="true">
-                <img src="assets/images/banner/shape/26.svg" alt="shape_image">
-            </div>
-            <div class="shape three" data-speed="0.04">
-                <img src="assets/images/banner/shape/27.svg" alt="shape_image">
-            </div>
-            <div class="shape four" data-speed="0.04">
-                <img src="assets/images/banner/shape/28.svg" alt="shape_image">
-            </div>
-            <div class="shape five" data-speed="0.04" data-revert="true">
-                <img src="assets/images/banner/shape/29.svg" alt="shape_image">
-            </div>
-            <div class="shape six" data-speed="0.04" data-revert="true">
-                <img src="assets/images/banner/shape/02.svg" alt="shape_image">
-            </div>
+          <div class="shape one" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/25.svg" alt="shape_image"></div>
+          <div class="shape two" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/26.svg" alt="shape_image"></div>
+          <div class="shape three" data-speed="0.04"><img src="assets/images/banner/shape/27.svg" alt="shape_image"></div>
+          <div class="shape four" data-speed="0.04"><img src="assets/images/banner/shape/28.svg" alt="shape_image"></div>
+          <div class="shape five" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/29.svg" alt="shape_image"></div>
+          <div class="shape six" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/02.svg" alt="shape_image"></div>
         </div>
+      </div>
     </div>
-</section>
-<!-- aula destaque end -->
+  </section>
+  <!-- aula destaque end -->
 
-
-<!-- about section -->
-<section class="rts-about-area rts-shape-move area-4 rts-section-gap">
+  <!-- about section -->
+  <section class="rts-about-area rts-shape-move area-4 rts-section-gap">
     <div class="container">
-        <div class="section-inner">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="about-image">
-                        <img src="assets/images/about/about-04.png" width="626" alt="Sobre a Escolinha Encantada">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-content">
-                        <div class="section-title-area">
-                            <p class="pre-title"><img src="assets/images/banner/title-img.svg" alt="">Quem Somos</p>
-                            <h2 class="section-title">Educar com encantamento, intencionalidade e propósito</h2>
-                            <p class="desc">Acreditamos que aprender é mágico. Unimos responsabilidade pedagógica e acolhimento afetivo para que as crianças sejam protagonistas do próprio desenvolvimento.</p>
-                        </div>
-                        <ul class="about-wrapper">
-                            <li class="wrapper-list-style-2">
-                                <div class="list-inner">
-                                    <div class="icon"><img src="assets/images/icon/32.svg" width="95" alt=""></div>
-                                    <div class="content">
-                                        <h4 class="title">Nossa Missão</h4>
-                                        <p class="desc">Promover o desenvolvimento infantil com base no brincar, no afeto e no encantamento.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="wrapper-list-style-2">
-                                <div class="list-inner">
-                                    <div class="icon"><img src="assets/images/icon/33.svg" width="95" alt=""></div>
-                                    <div class="content">
-                                        <h4 class="title">Nosso Compromisso</h4>
-                                        <p class="desc">Cuidar e educar com excelência, respeitando a individualidade e o tempo de cada criança.</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="about-btn-area">
-                            <a href="https://hotmart.com/pt-br/marketplace/produtos/escolinha-encantada/M99095302B" class="rts-btn btn-primary2">Comece a estudar <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+      <div class="section-inner">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="about-image">
+              <img src="assets/images/about/about-04.png" width="626" alt="Sobre a Escolinha Encantada">
             </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-content">
+              <div class="section-title-area">
+                <p class="pre-title"><img src="assets/images/banner/title-img.svg" alt="">Quem Somos</p>
+                <h2 class="section-title">Educar com encantamento, intencionalidade e propósito</h2>
+                <p class="desc">Acreditamos que aprender é mágico. Unimos responsabilidade pedagógica e acolhimento afetivo para que as crianças sejam protagonistas do próprio desenvolvimento.</p>
+              </div>
+              <ul class="about-wrapper">
+                <li class="wrapper-list-style-2">
+                  <div class="list-inner">
+                    <div class="icon"><img src="assets/images/icon/32.svg" width="95" alt=""></div>
+                    <div class="content">
+                      <h4 class="title">Nossa Missão</h4>
+                      <p class="desc">Promover o desenvolvimento infantil com base no brincar, no afeto e no encantamento.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="wrapper-list-style-2">
+                  <div class="list-inner">
+                    <div class="icon"><img src="assets/images/icon/33.svg" width="95" alt=""></div>
+                    <div class="content">
+                      <h4 class="title">Nosso Compromisso</h4>
+                      <p class="desc">Cuidar e educar com excelência, respeitando a individualidade e o tempo de cada criança.</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="about-btn-area">
+                <a href="https://hotmart.com/pt-br/marketplace/produtos/escolinha-encantada/M99095302B" class="rts-btn btn-primary2">Comece a estudar <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <div class="shape-image">
-        <div class="shape one" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/08.svg" alt="shape_image"></div>
-        <div class="shape two" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/09.svg" alt="shape_image"></div>
-        <div class="shape three" data-speed="0.04"><img src="assets/images/banner/shape/10.svg" alt="shape_image"></div>
+      <div class="shape one" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/08.svg" alt="shape_image"></div>
+      <div class="shape two" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/09.svg" alt="shape_image"></div>
+      <div class="shape three" data-speed="0.04"><img src="assets/images/banner/shape/10.svg" alt="shape_image"></div>
     </div>
-</section>
-<!-- about section end -->
+  </section>
+  <!-- about section end -->
 
-
-<!-- course area start -->
-<section class="rts-course-area rts-shape-move section-bg">
+  <!-- course area start -->
+  <section class="rts-course-area rts-shape-move section-bg">
     <div class="container">
-        <div class="section-title-area text-center">
-            <p class="pre-title justify-content-center"><img src="assets/images/banner/title-img.svg" alt="">Aulas</p>
-            <h2 class="section-title">Conheça as Aulas da Escolinha Encantada</h2>
-            <p class="desc">Do primeiro som às primeiras palavras: cada encontro é uma nova aventura com o Leo Leão.</p>
-        </div>
-        <div class="slider-inner">
-            <div class="swiper mySwiper-category-1 swiper-data" data-swiper='{
-                        "spaceBetween":30,
-                        "slidesPerView":3,
-                        "loop": true,
-                        "speed": 1500,
-                        "pagination":{
-                            "el": ".swiper-paginations",
-                            "clickable": "true"
-                        },
-                        "autoplay":{
-                            "delay":"4000"
-                        },
-                        "breakpoints":{
-                        "0":{
-                            "slidesPerView":1,
-                            "spaceBetween":30},
-                        "320":{
-                            "slidesPerView":1,
-                            "spaceBetween":30},
-                        "480":{
-                            "slidesPerView":1,
-                            "spaceBetween":30},
-                        "768":{
-                            "slidesPerView":2,
-                            "spaceBetween":30},
-                        "840":{
-                            "slidesPerView":2,
-                            "spaceBetween":30},
-                        "1140":{
-                            "slidesPerView":3,
-                            "spaceBetween":30}
-                        }
-                    }'>
-                <div class="swiper-wrapper">
-                    <!-- Aula 1 -->
-                    <div class="swiper-slide">
-                        <div class="course-wrapper" style="height: 100%;">
-                            <div class="wrapper-inner" style="height: 100%; display: flex; flex-direction: column;">
-                                <div class="image">
-                                    <img src="assets/images/course/01.jpg" alt="">
-                                </div>
-                                <div class="content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                                    <h4 class="title">Aula 1: Leo Leão e os Sons</h4>
-                                    <p class="desc">Apresentação do mascote e dos primeiros sons do alfabeto — com histórias, músicas e brincadeiras.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Aula 2 -->
-                    <div class="swiper-slide">
-                        <div class="course-wrapper" style="height: 100%;">
-                            <div class="wrapper-inner" style="height: 100%; display: flex; flex-direction: column;">
-                                <div class="image">
-                                    <img src="assets/images/course/02.jpg" alt="">
-                                </div>
-                                <div class="content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                                    <h4 class="title">Aula 2: Vogais Encantadas</h4>
-                                    <p class="desc">Exploração criativa das vogais com rimas, canções e cartões coloridos junto do Leo Leão.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Aula 3 -->
-                    <div class="swiper-slide">
-                        <div class="course-wrapper" style="height: 100%;">
-                            <div class="wrapper-inner" style="height: 100%; display: flex; flex-direction: column;">
-                                <div class="image">
-                                    <img src="assets/images/course/03.jpg" alt="">
-                                </div>
-                                <div class="content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                                    <h4 class="title">Aula 3: Sons e Sílabas</h4>
-                                    <p class="desc">Juntando sons e formando sílabas simples com jogos e desafios divertidos.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Aula 4 -->
-                    <div class="swiper-slide">
-                        <div class="course-wrapper" style="height: 100%;">
-                            <div class="wrapper-inner" style="height: 100%; display: flex; flex-direction: column;">
-                                <div class="image">
-                                    <img src="assets/images/course/03.jpg" alt="">
-                                </div>
-                                <div class="content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                                    <h4 class="title">Aula 4: Montando Palavras</h4>
-                                    <p class="desc">As primeiras palavrinhas com apoio visual, repetição guiada e desafios com o Leo Leão.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of cards -->
+      <div class="section-title-area text-center">
+        <p class="pre-title justify-content-center"><img src="assets/images/banner/title-img.svg" alt="">Aulas</p>
+        <h2 class="section-title">Conheça as Aulas da Escolinha Encantada</h2>
+        <p class="desc">Do primeiro som às primeiras palavras: cada encontro é uma nova aventura com o Leo Leão.</p>
+      </div>
+      <div class="slider-inner">
+        <div class="swiper mySwiper-category-1 swiper-data" data-swiper='{
+          "spaceBetween":30,"slidesPerView":3,"loop": true,"speed": 1500,
+          "pagination":{"el": ".swiper-paginations","clickable": "true"},
+          "autoplay":{"delay":"4000"},
+          "breakpoints":{
+            "0":{"slidesPerView":1,"spaceBetween":30},
+            "320":{"slidesPerView":1,"spaceBetween":30},
+            "480":{"slidesPerView":1,"spaceBetween":30},
+            "768":{"slidesPerView":2,"spaceBetween":30},
+            "840":{"slidesPerView":2,"spaceBetween":30},
+            "1140":{"slidesPerView":3,"spaceBetween":30}
+          }}'>
+          <div class="swiper-wrapper">
+            <!-- Aula cards -->
+            <div class="swiper-slide">
+              <div class="course-wrapper" style="height: 100%;">
+                <div class="wrapper-inner" style="height: 100%; display: flex; flex-direction: column;">
+                  <div class="image"><img src="assets/images/course/01.jpg" alt=""></div>
+                  <div class="content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <h4 class="title">Aula 1: Leo Leão e os Sons</h4>
+                    <p class="desc">Apresentação do mascote e dos primeiros sons do alfabeto — com histórias, músicas e brincadeiras.</p>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="swiper-paginations"></div>
+
+            <div class="swiper-slide">
+              <div class="course-wrapper" style="height: 100%;">
+                <div class="wrapper-inner" style="height: 100%; display: flex; flex-direction: column;">
+                  <div class="image"><img src="assets/images/course/02.jpg" alt=""></div>
+                  <div class="content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <h4 class="title">Aula 2: Vogais Encantadas</h4>
+                    <p class="desc">Exploração criativa das vogais com rimas, canções e cartões coloridos junto do Leo Leão.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="course-wrapper" style="height: 100%;">
+                <div class="wrapper-inner" style="height: 100%; display: flex; flex-direction: column;">
+                  <div class="image"><img src="assets/images/course/03.jpg" alt=""></div>
+                  <div class="content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <h4 class="title">Aula 3: Sons e Sílabas</h4>
+                    <p class="desc">Juntando sons e formando sílabas simples com jogos e desafios divertidos.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="course-wrapper" style="height: 100%;">
+                <div class="wrapper-inner" style="height: 100%; display: flex; flex-direction: column;">
+                  <div class="image"><img src="assets/images/course/03.jpg" alt=""></div>
+                  <div class="content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <h4 class="title">Aula 4: Montando Palavras</h4>
+                    <p class="desc">As primeiras palavrinhas com apoio visual, repetição guiada e desafios com o Leo Leão.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End cards -->
+          </div>
         </div>
-        <img class="banner-bg-shape-3" src="assets/images/banner/banner-bg-2.png" alt="">
+        <div class="swiper-paginations"></div>
+      </div>
+      <img class="banner-bg-shape-3" src="assets/images/banner/banner-bg-2.png" alt="">
     </div>
     <div class="shape-image">
-        <div class="shape one" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/11.svg" alt="shape_image"></div>
-        <div class="shape two" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/12.svg" alt="shape_image"></div>
+      <div class="shape one" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/11.svg" alt="shape_image"></div>
+      <div class="shape two" data-speed="0.04" data-revert="true"><img src="assets/images/banner/shape/12.svg" alt="shape_image"></div>
     </div>
-</section>
-<!-- course area end -->
+  </section>
+  <!-- course area end -->
 
-<!-- spacing fix -->
-<style>
-/* reduce top and bottom padding of course section */
-.rts-course-area {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-}
-@media (max-width: 767.98px) {
-  .rts-course-area {
-    padding-top: 35px !important;
-    padding-bottom: 35px !important;
-  }
-}
-</style>
+  <!-- spacing fix -->
+  <style>
+    .rts-course-area { padding-top: 50px !important; padding-bottom: 50px !important; }
+    @media (max-width: 767.98px) {
+      .rts-course-area { padding-top: 35px !important; padding-bottom: 35px !important; }
+    }
+  </style>
 
-
-<!-- chamada de ação intermediária start -->
-<section class="rts-about-area area-3 rts-section-gap">
+  <!-- chamada de ação intermediária start -->
+  <section class="rts-about-area area-3 rts-section-gap">
     <div class="container">
-        <div class="section-inner">
-            <div class="section-bg-area">
-                <img src="assets/images/about/about-bg.png" alt="">
-            </div>
-            <div class="content-inner rts-shape-move">
-                <div class="image-area">
-                    <img src="assets/images/about/about-03.jpg" width="295" alt="">
-                    <img class="shape-img" src="assets/images/about/shape-01.png" alt="">
-                    <img class="shape-img2" src="assets/images/banner/shape/02.svg" alt="">
-                </div>
-                <div class="right-side-content">
-                    <h2 class="heading-title">Seu filho pronto para aprender com diversão!</h2>
-                    <p class="desc">Aulas envolventes, personagens encantadores e um método comprovado de alfabetização transformam o estudo em uma experiência mágica.</p>
-                    <div class="button-area">
-                        <a href="https://hotmart.com/pt-br/marketplace/produtos/escolinha-encantada/M99095302B" class="rts-btn">Quero matricular agora <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="shape-image">
-                <div class="shape one" data-speed="0.04" data-revert="true"><img src="assets/images/about/01.svg" alt="shape_image"></div>
-                <div class="shape two" data-speed="0.04"><img src="assets/images/about/02.svg" alt="shape_image"></div>
-                <div class="shape three" data-speed="0.04" data-revert="true"><img src="assets/images/about/03.svg" alt="shape_image"></div>
-            </div>
+      <div class="section-inner">
+        <div class="section-bg-area">
+          <img src="assets/images/about/about-bg.png" alt="">
         </div>
+        <div class="content-inner rts-shape-move">
+          <div class="image-area">
+            <img src="assets/images/about/about-03.jpg" width="295" alt="">
+            <img class="shape-img" src="assets/images/about/shape-01.png" alt="">
+            <img class="shape-img2" src="assets/images/banner/shape/02.svg" alt="">
+          </div>
+          <div class="right-side-content">
+            <h2 class="heading-title">Seu filho pronto para aprender com diversão!</h2>
+            <p class="desc">Aulas envolventes, personagens encantadores e um método comprovado de alfabetização transformam o estudo em uma experiência mágica.</p>
+            <div class="button-area">
+              <a href="https://hotmart.com/pt-br/marketplace/produtos/escolinha-encantada/M99095302B" class="rts-btn">Quero matricular agora <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="shape-image">
+          <div class="shape one" data-speed="0.04" data-revert="true"><img src="assets/images/about/01.svg" alt="shape_image"></div>
+          <div class="shape two" data-speed="0.04"><img src="assets/images/about/02.svg" alt="shape_image"></div>
+          <div class="shape three" data-speed="0.04" data-revert="true"><img src="assets/images/about/03.svg" alt="shape_image"></div>
+        </div>
+      </div>
     </div>
-</section>
-<!-- chamada de ação intermediária end -->
+  </section>
+  <!-- chamada de ação intermediária end -->
 
-<!-- class area start -->
-<section class="rts-class-area">
+  <!-- class area start -->
+  <section class="rts-class-area">
     <div class="container">
-        <div class="section-title-area text-center">
-            <p class="pre-title justify-content-center">
-                <img src="assets/images/banner/title-img.svg" alt="">Turmas Encantadas
-            </p>
-            <h2 class="section-title">Programas para Cada Etapa</h2>
-            <p class="desc">Do primeiro contato com as letras à leitura fluente,<br> há um caminho mágico para cada criança.</p>
-        </div>
-        <div class="section-inner">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="class-wrapper">
-                        <div class="wrapper-inner">
-                            <div class="icon">
-                                <img src="assets/images/icon/03.svg" alt="">
-                            </div>
-                            <a href="program-details.html">
-                                <h4 class="title">Pré-Letramento</h4>
-                            </a>
-                            <p class="period">(3 - 4 anos)</p>
-                            <p class="desc">Primeiros passos com sons, formas e rimas, sempre com mediação lúdica.</p>
-                            <div class="shape-icon"><img src="assets/images/banner/blink.svg" alt=""></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="class-wrapper two">
-                        <div class="wrapper-inner">
-                            <div class="icon">
-                                <img src="assets/images/icon/04.svg" alt="">
-                            </div>
-                            <a href="program-details.html">
-                                <h4 class="title">Alfabetização 1</h4>
-                            </a>
-                            <p class="period">(4 - 5 anos)</p>
-                            <p class="desc">Construção de sílabas e palavras com o Prof. Leão em aventuras encantadas.</p>
-                            <div class="shape-icon"><img src="assets/images/banner/blink.svg" alt=""></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="class-wrapper three">
-                        <div class="wrapper-inner">
-                            <div class="icon">
-                                <img src="assets/images/icon/05.svg" alt="">
-                            </div>
-                            <a href="program-details.html">
-                                <h4 class="title">Alfabetização 2</h4>
-                            </a>
-                            <p class="period">(5 - 6 anos)</p>
-                            <p class="desc">Leitura e compreensão com jogos, músicas e apostilas interativas.</p>
-                            <div class="shape-icon"><img src="assets/images/banner/blink.svg" alt=""></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="class-wrapper four">
-                        <div class="wrapper-inner">
-                            <div class="icon">
-                                <img src="assets/images/icon/06.svg" style="filter: brightness(0) saturate(100%);"  alt="">
-                            </div>
-                            <a href="program-details.html">
-                                <h4 class="title" style="color: black;">Leitura Mágica</h4>
-                            </a>
-                            <p class="period" style="color: black;">(6+ anos)</p>
-                            <p class="desc" style="color: black;">Histórias, interpretação e prática de leitura com apoio psicopedagógico.</p>
-                            <div class="shape-icon" style="color: black;"><img src="assets/images/banner/blink.svg" alt=""></div>
-                        </div>
-                    </div>
-                </div>
+      <div class="section-title-area text-center">
+        <p class="pre-title justify-content-center"><img src="assets/images/banner/title-img.svg" alt="">Turmas Encantadas</p>
+        <h2 class="section-title">Programas para Cada Etapa</h2>
+        <p class="desc">Do primeiro contato com as letras à leitura fluente,<br> há um caminho mágico para cada criança.</p>
+      </div>
+      <div class="section-inner">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="class-wrapper">
+              <div class="wrapper-inner">
+                <div class="icon"><img src="assets/images/icon/03.svg" alt=""></div>
+                <a href="program-details.html"><h4 class="title">Pré-Letramento</h4></a>
+                <p class="period">(3 - 4 anos)</p>
+                <p class="desc">Primeiros passos com sons, formas e rimas, sempre com mediação lúdica.</p>
+                <div class="shape-icon"><img src="assets/images/banner/blink.svg" alt=""></div>
+              </div>
             </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="class-wrapper two">
+              <div class="wrapper-inner">
+                <div class="icon"><img src="assets/images/icon/04.svg" alt=""></div>
+                <a href="program-details.html"><h4 class="title">Alfabetização 1</h4></a>
+                <p class="period">(4 - 5 anos)</p>
+                <p class="desc">Construção de sílabas e palavras com o Prof. Leão em aventuras encantadas.</p>
+                <div class="shape-icon"><img src="assets/images/banner/blink.svg" alt=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="class-wrapper three">
+              <div class="wrapper-inner">
+                <div class="icon"><img src="assets/images/icon/05.svg" alt=""></div>
+                <a href="program-details.html"><h4 class="title">Alfabetização 2</h4></a>
+                <p class="period">(5 - 6 anos)</p>
+                <p class="desc">Leitura e compreensão com jogos, músicas e apostilas interativas.</p>
+                <div class="shape-icon"><img src="assets/images/banner/blink.svg" alt=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="class-wrapper four">
+              <div class="wrapper-inner">
+                <div class="icon"><img src="assets/images/icon/06.svg" style="filter: brightness(0) saturate(100%);" alt=""></div>
+                <a href="program-details.html"><h4 class="title" style="color: black;">Leitura Mágica</h4></a>
+                <p class="period" style="color: black;">(6+ anos)</p>
+                <p class="desc" style="color: black;">Histórias, interpretação e prática de leitura com apoio psicopedagógico.</p>
+                <div class="shape-icon" style="color: black;"><img src="assets/images/banner/blink.svg" alt=""></div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</section>
-<!-- class area end -->    
-              
-<!-- pricing area start -->
-<section class="rts-pricing-area rts-section-gap">
-    <div class="container">
-        <div class="section-title-area text-center">
-            <p class="pre-title justify-content-center">
-                <img src="assets/images/banner/title-img.svg" alt="">Matrícula
-            </p>
-            <h2 class="section-title">Comece hoje mesmo essa jornada encantada</h2>
-            <p class="desc">Acesso completo às aulas, vídeos, materiais e atividades com o Prof. Leo Leão.</p>
-        </div>
-        <div class="section-inner">
-            <div class="row justify-content-center">
-                <div class="col-lg-5 col-md-8">
-                    <div class="pricing-wrapper bg-four">
-                        <div class="pricing-head">
-                            <p class="plan">Pacote Completo</p>
-                            <p class="pricing-validity"><span class="price">R$29,99</span> / acesso único</p>
-                        </div>
-                        <div class="pricing-body" >
-                            <p class="desc" style="color: black;">Para famílias que desejam acompanhar de perto a alfabetização com leveza, diversão e muito carinho.</p>
-                            <ul class="pricing-list" style="color: black;" >
-                                <li style="color: black;"><i class="fa-light fa-check"></i>+20 videoaulas com o Prof. Leo Leão</li>
-                                <li style="color: black;"><i class="fa-light fa-check"></i>20 apostilas e materiais completos</li>
-                                <li style="color: black;"><i class="fa-light fa-check"></i>Trilhas e atividades organizadas</li>
-                                <li style="color: black;"><i class="fa-light fa-check"></i>Acesso vitalício</li>
-                                <li style="color: black;"><i class="fa-light fa-check"></i>Plataforma simples e encantadora</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-button-area">
-                            <a href="https://hotmart.com/pt-br/marketplace/produtos/escolinha-encantada/M99095302B" class="rts-btn pricing-btn btn-primary">Começar Agora</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>  
-</section>
-<!-- pricing area end -->
-   
+  </section>
+  <!-- class area end -->
 
-    
-<!-- testimonials area start -->
-<section class="rts-testimonials-area rts-shape-move v-4 section-bg2">
+  <!-- pricing area start -->
+  <section class="rts-pricing-area rts-section-gap">
     <div class="container">
-        <div class="section-title-area text-center">
-            <p class="pre-title justify-content-center"><img src="assets/images/banner/title-img.svg" alt="">Depoimentos</p>
-            <h2 class="section-title">O Que os Pais Dizem Sobre Nós</h2>
-            <p class="desc">O sucesso e a alegria dos nossos alunos orientam tudo o que fazemos. Veja o que as famílias contam.</p>
-        </div>
-        <div class="slider-inner">
-            <div class="swiper mySwiper-category-1 swiper-data" data-swiper='{
-                "spaceBetween":30,
-                "slidesPerView":3,
-                "loop": true,
-                "speed": 1500,
-                "pagination":{
-                    "el": ".swiper-paginations",
-                    "clickable": "true"
-                },
-                "autoplay":{
-                    "delay":"4000"
-                },
-                "breakpoints":{
-                    "0":{
-                        "slidesPerView":1,
-                        "spaceBetween":30},
-                    "320":{
-                        "slidesPerView":1,
-                        "spaceBetween":30},
-                    "480":{
-                        "slidesPerView":1,
-                        "spaceBetween":30},
-                    "640":{
-                        "slidesPerView":1,
-                        "spaceBetween":30},
-                    "840":{
-                        "slidesPerView":2,
-                        "spaceBetween":30},
-                    "1140":{
-                        "slidesPerView":3,
-                        "spaceBetween":30}
-                }
-            }'>
-                <div class="swiper-wrapper">
-                    <!-- single swiper style -->
-                    <div class="swiper-slide">
-                        <div class="testimonials-wrapper-style-3">
-                            <div class="wrapper-inner">
-                                <div class="content-inner">
-                                    <ul class="star-rating-area">
-                                        <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
-                                     <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
-                                    </ul>
-                                    <div class="content">
-                                        <p class="desc">“Meu filho aprendeu a ler com prazer e sem pressa. As aulas são cativantes!”</p>
-                                    </div>
-                                    <div class="author-area">
-                                    
-                                        <div class="author-details">
-                                            <h4 class="author">Samanta Carvalho</h4>
-                                            <p class="desig">Mãe do Samuel</p>
-                                        </div>
-                                    </div>
-                                    <div class="quote-shape">
-                                        <img src="assets/images/icon/quote.svg" alt="Citação">
-                                    </div>
-                                </div>
-                                <div class="testimonials-shape-image">
-                                    <div class="shape one"><img src="assets/images/icon/26.svg" alt="shape_image"></div>
-                                    <div class="shape two"><img src="assets/images/icon/27.svg" alt="shape_image"></div>
-                                    <div class="shape three"><img src="assets/images/icon/28.svg" alt="shape_image"></div>
-                                    <div class="shape four"><img src="assets/images/icon/29.svg" alt="shape_image"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single swiper style -->
-                    <div class="swiper-slide">
-                        <div class="testimonials-wrapper-style-3">
-                            <div class="wrapper-inner">
-                                <div class="content-inner">
-                                    <ul class="star-rating-area">
-                                        <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
-                                         <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
-                                    </ul>
-                                    <div class="content">
-                                        <p class="desc">“Conteúdo super didático e numa linguagem incrível. Minha filha se envolve de verdade.”</p>
-                                    </div>
-                                    <div class="author-area">
-                                     
-                                        <div class="author-details">
-                                            <h4 class="author">Clara Maria</h4>
-                                            <p class="desig">Mãe da Júlia</p>
-                                        </div>
-                                    </div>
-                                    <div class="quote-shape">
-                                        <img src="assets/images/icon/quote.svg" alt="Citação">
-                                    </div>
-                                </div>
-                                <div class="testimonials-shape-image">
-                                    <div class="shape one"><img src="assets/images/icon/26.svg" alt="shape_image"></div>
-                                    <div class="shape two"><img src="assets/images/icon/27.svg" alt="shape_image"></div>
-                                    <div class="shape three"><img src="assets/images/icon/28.svg" alt="shape_image"></div>
-                                    <div class="shape four"><img src="assets/images/icon/29.svg" alt="shape_image"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single swiper style -->
-                    <div class="swiper-slide">
-                        <div class="testimonials-wrapper-style-3">
-                            <div class="wrapper-inner">
-                                <div class="content-inner">
-                                    <ul class="star-rating-area">
-                                        <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
-                                       <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
-                                    </ul>
-                                    <div class="content">
-                                        <p class="desc">“As músicas e os jogos prenderam a atenção do meu filho. Ele ama estudar com o Leo Leão!”</p>
-                                    </div>
-                                    <div class="author-area">
-                                      
-                                        <div class="author-details">
-                                            <h4 class="author">João Luciano</h4>
-                                            <p class="desig">Pai do Lucas</p>
-                                        </div>
-                                    </div>
-                               
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single swiper style -->
-                </div>
+      <div class="section-title-area text-center">
+        <p class="pre-title justify-content-center"><img src="assets/images/banner/title-img.svg" alt="">Matrícula</p>
+        <h2 class="section-title">Comece hoje mesmo essa jornada encantada</h2>
+        <p class="desc">Acesso completo às aulas, vídeos, materiais e atividades com o Prof. Leo Leão.</p>
+      </div>
+      <div class="section-inner">
+        <div class="row justify-content-center">
+          <div class="col-lg-5 col-md-8">
+            <div class="pricing-wrapper bg-four">
+              <div class="pricing-head">
+                <p class="plan">Pacote Completo</p>
+                <p class="pricing-validity"><span class="price">R$29,99</span> / acesso único</p>
+              </div>
+              <div class="pricing-body">
+                <p class="desc" style="color: black;">Para famílias que desejam acompanhar de perto a alfabetização com leveza, diversão e muito carinho.</p>
+                <ul class="pricing-list" style="color: black;">
+                  <li style="color: black;"><i class="fa-light fa-check"></i>+20 videoaulas com o Prof. Leo Leão</li>
+                  <li style="color: black;"><i class="fa-light fa-check"></i>20 apostilas e materiais completos</li>
+                  <li style="color: black;"><i class="fa-light fa-check"></i>Trilhas e atividades organizadas</li>
+                  <li style="color: black;"><i class="fa-light fa-check"></i>Acesso vitalício</li>
+                  <li style="color: black;"><i class="fa-light fa-check"></i>Plataforma simples e encantadora</li>
+                </ul>
+              </div>
+              <div class="pricing-button-area">
+                <a href="https://hotmart.com/pt-br/marketplace/produtos/escolinha-encantada/M99095302B" class="rts-btn pricing-btn btn-primary">Começar Agora</a>
+              </div>
             </div>
-            <div class="swiper-paginations"></div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="shape-image">
+  </section>
+  <!-- pricing area end -->
+
+  <!-- testimonials area start -->
+  <section class="rts-testimonials-area rts-shape-move v-4 section-bg2">
+    <div class="container">
+      <div class="section-title-area text-center">
+        <p class="pre-title justify-content-center"><img src="assets/images/banner/title-img.svg" alt="">Depoimentos</p>
+        <h2 class="section-title">O Que os Pais Dizem Sobre Nós</h2>
+        <p class="desc">O sucesso e a alegria dos nossos alunos orientam tudo o que fazemos. Veja o que as famílias contam.</p>
+      </div>
+      <div class="slider-inner">
+        <div class="swiper mySwiper-category-1 swiper-data" data-swiper='{
+          "spaceBetween":30,"slidesPerView":3,"loop": true,"speed": 1500,
+          "pagination":{"el": ".swiper-paginations","clickable": "true"},
+          "autoplay":{"delay":"4000"},
+          "breakpoints":{
+            "0":{"slidesPerView":1,"spaceBetween":30},
+            "320":{"slidesPerView":1,"spaceBetween":30},
+            "480":{"slidesPerView":1,"spaceBetween":30},
+            "640":{"slidesPerView":1,"spaceBetween":30},
+            "840":{"slidesPerView":2,"spaceBetween":30},
+            "1140":{"slidesPerView":3,"spaceBetween":30}
+          }}'>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonials-wrapper-style-3">
+                <div class="wrapper-inner">
+                  <div class="content-inner">
+                    <ul class="star-rating-area">
+                      <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
+                      <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
+                      <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
+                      <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
+                      <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
+                    </ul>
+                    <div class="content">
+                      <p class="desc">“Meu filho aprendeu a ler com prazer e sem pressa. As aulas são cativantes!”</p>
+                    </div>
+                    <div class="author-area">
+                      <div class="author-details">
+                        <h4 class="author">Samanta Carvalho</h4>
+                        <p class="desig">Mãe do Samuel</p>
+                      </div>
+                    </div>
+                    <div class="quote-shape"><img src="assets/images/icon/quote.svg" alt="Citação"></div>
+                  </div>
+                  <div class="testimonials-shape-image">
+                    <div class="shape one"><img src="assets/images/icon/26.svg" alt="shape_image"></div>
+                    <div class="shape two"><img src="assets/images/icon/27.svg" alt="shape_image"></div>
+                    <div class="shape three"><img src="assets/images/icon/28.svg" alt="shape_image"></div>
+                    <div class="shape four"><img src="assets/images/icon/29.svg" alt="shape_image"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonials-wrapper-style-3">
+                <div class="wrapper-inner">
+                  <div class="content-inner">
+                    <ul class="star-rating-area">
+                      <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
+                      <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
+                      <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
+                      <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
+                      <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
+                    </ul>
+                    <div class="content">
+                      <p class="desc">“Conteúdo super didático e numa linguagem incrível. Minha filha se envolve de verdade.”</p>
+                    </div>
+                    <div class="author-area">
+                      <div class="author-details">
+                        <h4 class="author">Clara Maria</h4>
+                        <p class="desig">Mãe da Júlia</p>
+                      </div>
+                    </div>
+                    <div class="quote-shape"><img src="assets/images/icon/quote.svg" alt="Citação"></div>
+                  </div>
+                  <div class="testimonials-shape-image">
+                    <div class="shape one"><img src="assets/images/icon/26.svg" alt="shape_image"></div>
+                    <div class="shape two"><img src="assets/images/icon/27.svg" alt="shape_image"></div>
+                    <div class="shape three"><img src="assets/images/icon/28.svg" alt="shape_image"></div>
+                    <div class="shape four"><img src="assets/images/icon/29.svg" alt="shape_image"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonials-wrapper-style-3">
+                <div class="wrapper-inner">
+                  <div class="content-inner">
+                    <ul class="star-rating-area">
+                      <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
+                      <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
+                      <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
+                      <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
+                      <li><a href="#"><i class="fa-sharp fa-solid fa-star"></i></a></li>
+                    </ul>
+                    <div class="content">
+                      <p class="desc">“As músicas e os jogos prenderam a atenção do meu filho. Ele ama estudar com o Leo Leão!”</p>
+                    </div>
+                    <div class="author-area">
+                      <div class="author-details">
+                        <h4 class="author">João Luciano</h4>
+                        <p class="desig">Pai do Lucas</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end slides -->
+          </div>
+        </div>
+        <div class="swiper-paginations"></div>
+      </div>
+      <div class="shape-image">
         <div class="shape one"><img src="assets/images/icon/26.svg" alt="shape_image"></div>
         <div class="shape two"><img src="assets/images/icon/27.svg" alt="shape_image"></div>
         <div class="shape three"><img src="assets/images/icon/28.svg" alt="shape_image"></div>
         <div class="shape four"><img src="assets/images/icon/29.svg" alt="shape_image"></div>
+      </div>
     </div>
-</section>
-<!-- testimonials area end -->
+  </section>
+  <!-- testimonials area end -->
 
-
-
-
-    <!-- footer call to action area start -->
-<div class="rts-footer-area section-bg">
+  <!-- footer call to action area start -->
+  <div class="rts-footer-area section-bg">
     <div class="container">
-        <div class="row ptb--65">
-            <div class="col-lg-12">
-                <!-- footer main wrapper -->
-                <div class="footer-one-main-wrapper">
-
-                    <!-- logo and about -->
-                    <div class="footer-single-wized left-logo">
-                        <div class="head">
-                            <a href="#">
-                                <img src="assets/images/logo/logo-1.png" alt="logo" loading="lazy">
-                            </a>
-                        </div>
-                        <div class="body">
-                            <p class="dsic">
-                                Um programa encantado que une aprendizado, imaginação e afeto — com o Prof. Leo Leão guiando cada passo da alfabetização.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- menu links -->
-                    <div class="footer-single-wized">
-                        <div class="head">
-                            <h6 class="title">Navegação</h6>
-                        </div>
-                        <div class="body">
-                            <ul class="menu">
-                                <li><a href="index.html">Início</a></li>
-                              
-                             
-                            
-                            </ul>
-                        </div>
-                    </div>
-
-                    
-
-                  
-
-                </div>
-                <!-- footer main wrapper end -->
+      <div class="row ptb--65">
+        <div class="col-lg-12">
+          <div class="footer-one-main-wrapper">
+            <div class="footer-single-wized left-logo">
+              <div class="head">
+                <a href="#"><img src="assets/images/logo/logo-1.png" alt="logo" loading="lazy"></a>
+              </div>
+              <div class="body">
+                <p class="dsic">Um programa encantado que une aprendizado, imaginação e afeto — com o Prof. Leo Leão guiando cada passo da alfabetização.</p>
+              </div>
             </div>
+
+            <div class="footer-single-wized">
+              <div class="head"><h6 class="title">Navegação</h6></div>
+              <div class="body">
+                <ul class="menu">
+                  <li><a href="index.html">Início</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- footer main wrapper end -->
         </div>
+      </div>
     </div>
 
-    <!-- copyright -->
     <div class="copyright-area-one-border">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="copyright-area-one text-center">
-                        <p>© 2024 Escolinha Encantada – Todos os direitos reservados</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="copyright-area-one text-center">
+              <p>© 2024 Escolinha Encantada – Todos os direitos reservados</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<!-- footer call to action area end -->
+  </div>
+  <!-- footer call to action area end -->
 
-   <div id="preloader" class="preloader">
+  <div id="preloader" class="preloader">
     <div class="animation-preloader">
-        <div class="txt-loading">
-            <span data-text-preloader="E" class="letters-loading first">E</span>
-            <span data-text-preloader="S" class="letters-loading first">N</span>
-            <span data-text-preloader="C" class="letters-loading first">C</span>
-            <span data-text-preloader="O" class="letters-loading first">A</span>
-            <span data-text-preloader="L" class="letters-loading">N</span>
-            <span data-text-preloader="I" class="letters-loading">T</span>
-            <span data-text-preloader="N" class="letters-loading">A</span>
-            <span data-text-preloader="H" class="letters-loading">D</span>
-            <span data-text-preloader="A" class="letters-loading">A</span>
-        </div>
-        <p class="text-center">Carregando</p>
+      <div class="txt-loading">
+        <span data-text-preloader="E" class="letters-loading first">E</span>
+        <span data-text-preloader="S" class="letters-loading first">N</span>
+        <span data-text-preloader="C" class="letters-loading first">C</span>
+        <span data-text-preloader="O" class="letters-loading first">A</span>
+        <span data-text-preloader="L" class="letters-loading">N</span>
+        <span data-text-preloader="I" class="letters-loading">T</span>
+        <span data-text-preloader="N" class="letters-loading">A</span>
+        <span data-text-preloader="H" class="letters-loading">D</span>
+        <span data-text-preloader="A" class="letters-loading">A</span>
+      </div>
+      <p class="text-center">Carregando</p>
     </div>
     <div class="loader">
-        <div class="row">
-            <div class="col-3 loader-section section-left"><div class="bg"></div></div>
-            <div class="col-3 loader-section section-left"><div class="bg"></div></div>
-            <div class="col-3 loader-section section-right"><div class="bg"></div></div>
-            <div class="col-3 loader-section section-right"><div class="bg"></div></div>
-        </div>
+      <div class="row">
+        <div class="col-3 loader-section section-left"><div class="bg"></div></div>
+        <div class="col-3 loader-section section-left"><div class="bg"></div></div>
+        <div class="col-3 loader-section section-right"><div class="bg"></div></div>
+        <div class="col-3 loader-section section-right"><div class="bg"></div></div>
+      </div>
     </div>
-</div>
+  </div>
 
-<!-- rts backto top start -->
-<div class="progress-wrap">
+  <!-- rts backto top start -->
+  <div class="progress-wrap">
     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-            style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
-        </path>
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+        style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+      </path>
     </svg>
-</div>
-<!-- rts backto top end -->
+  </div>
+  <!-- rts backto top end -->
 
-<!-- offcanvase search -->
-<div class="search-input-area">
+  <!-- offcanvase search -->
+  <div class="search-input-area">
     <div class="container">
-        <div class="search-input-inner">
-            <div class="input-div">
-                <input class="search-input autocomplete" type="text" placeholder="Search by keyword or #">
-                <button><i class="far fa-search"></i></button>
-            </div>
+      <div class="search-input-inner">
+        <div class="input-div">
+          <input class="search-input autocomplete" type="text" placeholder="Search by keyword or #">
+          <button><i class="far fa-search"></i></button>
         </div>
+      </div>
     </div>
     <div id="close" class="search-close-icon"><i class="far fa-times"></i></div>
-</div>
-<!-- offcanvase search -->
-<div id="anywhere-home" class=""></div>
+  </div>
+  <div id="anywhere-home" class=""></div>
+  <!-- offcanvase search -->
 
-<!-- all scripts -->
-<script src="assets/js/vendor/jquery.min.js"></script>
-<script src="assets/js/vendor/jquery-ui.js"></script>
-<script src="assets/js/vendor/metismenu.js"></script>
-<script src="assets/js/vendor/magnifying-popup.js"></script>
-<script src="assets/js/plugins/swiper.js"></script>
-<script src="assets/js/plugins/counterup.js"></script>
-<script src="assets/js/vendor/waypoint.js"></script>
-<script src="assets/js/vendor/waw.js"></script>
-<script src="assets/js/plugins/isotop.js"></script>
-<script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
-<script src="assets/js/plugins/resizer-sensor.js"></script>
-<script src="assets/js/plugins/sticky-sidebar.js"></script>
-<script src="assets/js/plugins/twinmax.js"></script>
-<script src="assets/js/vendor/chroma.min.js"></script>
-<script src="assets/js/plugins/bootstrap.min.js"></script>
-<script src="assets/js/plugins/contact.form.js"></script>
-<script src="assets/js/plugins/calender.js"></script>
-<script src="assets/js/main.js"></script>
+  <!-- all scripts -->
+  <script src="assets/js/vendor/jquery.min.js"></script>
+  <script src="assets/js/vendor/jquery-ui.js"></script>
+  <script src="assets/js/vendor/metismenu.js"></script>
+  <script src="assets/js/vendor/magnifying-popup.js"></script>
+  <script src="assets/js/plugins/swiper.js"></script>
+  <script src="assets/js/plugins/counterup.js"></script>
+  <script src="assets/js/vendor/waypoint.js"></script>
+  <script src="assets/js/vendor/waw.js"></script>
+  <script src="assets/js/plugins/isotop.js"></script>
+  <script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/js/plugins/resizer-sensor.js"></script>
+  <script src="assets/js/plugins/sticky-sidebar.js"></script>
+  <script src="assets/js/plugins/twinmax.js"></script>
+  <script src="assets/js/vendor/chroma.min.js"></script>
+  <script src="assets/js/plugins/bootstrap.min.js"></script>
+  <script src="assets/js/plugins/contact.form.js"></script>
+  <script src="assets/js/plugins/calender.js"></script>
+  <script src="assets/js/main.js"></script>
 
+  <!-- Pixel event bindings + CAPI forwarder (no secrets here) -->
+  <script>
+    // --- Helpers to read Meta identifiers for better matching ---
+    function getCookie(name) {
+      const m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+      return m ? m.pop() : '';
+    }
+    function getFbp() { return getCookie('_fbp') || ''; }
+    function getFbc() {
+      const url = new URL(window.location.href);
+      const fbclid = url.searchParams.get('fbclid');
+      if (fbclid) return 'fb.1.' + Date.now() + '.' + fbclid;
+      return getCookie('_fbc') || '';
+    }
+
+    // --- Send an event to your backend for Conversions API (token stays hidden on server) ---
+    async function sendCapiEvent(eventName, eventData, eventId) {
+      try {
+        const payload = {
+          event_name: eventName,
+          event_time: Math.floor(Date.now() / 1000),
+          event_source_url: window.location.href,
+          action_source: 'website',
+          event_id: eventId || undefined, // for deduplication with fbq
+          fbp: getFbp(),
+          fbc: getFbc(),
+          user_data: {
+            // If you have email/phone from a form, add raw values here; server hashes them.
+            // em: "user@example.com", ph: "+5511999999999"
+          },
+          custom_data: eventData || {}
+        };
+
+        await fetch('/capi/track', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          keepalive: true,
+          body: JSON.stringify(payload)
+        });
+      } catch (e) {
+        console.warn('CAPI send failed', e);
+      }
+    }
+
+    // --- Track clicks to Hotmart as InitiateCheckout; buttons as Lead; video opens as ViewContent ---
+    function bindPixelEvents() {
+      if (!window.fbq || !META_PIXEL_ID) return;
+
+      // Hotmart links: InitiateCheckout
+      document.querySelectorAll('a[href*="hotmart.com"]').forEach(function(a){
+        a.addEventListener('click', function(){
+          const id = 'ic_' + Date.now();
+          fbq('track', 'InitiateCheckout', {}, { eventID: id });
+          sendCapiEvent('InitiateCheckout', {}, id);
+        }, { passive: true });
+      });
+
+      // CTA buttons: Lead
+      document.querySelectorAll('a.rts-btn, .pricing-btn, .btn-primary, .btn-primary2').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          const id = 'lead_' + Date.now();
+          fbq('track', 'Lead', {}, { eventID: id });
+          sendCapiEvent('Lead', {}, id);
+        }, { passive: true });
+      });
+
+      // Video opens: ViewContent
+      document.querySelectorAll('a.popup-video').forEach(function(v){
+        v.addEventListener('click', function(){
+          const id = 'vc_' + Date.now();
+          fbq('track', 'ViewContent', { content_name: 'Video Play' }, { eventID: id });
+          sendCapiEvent('ViewContent', { content_name: 'Video Play' }, id);
+        }, { passive: true });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', bindPixelEvents);
+    } else {
+      bindPixelEvents();
+    }
+  </script>
 </body>
 </html>
