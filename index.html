@@ -26,46 +26,46 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 
-<!-- Performance hints for Meta Pixel -->
-<link rel="preconnect" href="https://connect.facebook.net" crossorigin>
-<link rel="dns-prefetch" href="https://connect.facebook.net">
-<link rel="preconnect" href="https://www.facebook.com" crossorigin>
-<link rel="dns-prefetch" href="https://www.facebook.com">
+  <!-- Performance hints for Meta Pixel -->
+  <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+  <link rel="dns-prefetch" href="https://connect.facebook.net">
+  <link rel="preconnect" href="https://www.facebook.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.facebook.com">
 
-<!-- Meta Pixel Code -->
-<script>
-  // Your public Pixel ID (client-side is OK)
-  const META_PIXEL_ID = '1200423845416419';
+  <!-- Meta Pixel Code -->
+  <script>
+    // Your public Pixel ID (client-side is OK)
+    const META_PIXEL_ID = '1200423845416419';
 
-  // Keep CAPI off since the backend was removed
-  const USE_CAPI = false;
-  // If you later add a Netlify Function, consider: '/.netlify/functions/capi-track'
-  const CAPI_ENDPOINT = '/capi/track';
-</script>
-<script>
-  (function(f,b,e,v,n,t,s){
-    if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s);
-  })(window, document,'script','https://connect.facebook.net/pt_BR/fbevents.js');
+    // Keep CAPI off since the backend was removed
+    const USE_CAPI = false;
+    // If you later add a Netlify Function, consider: '/.netlify/functions/capi-track'
+    const CAPI_ENDPOINT = '/capi/track';
+  </script>
+  <script>
+    (function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s);
+    })(window, document,'script','https://connect.facebook.net/pt_BR/fbevents.js');
 
-  if (window.fbq && META_PIXEL_ID) {
-    fbq('init', META_PIXEL_ID);
-    fbq('track', 'PageView');
-  }
-</script>
-<!-- End Meta Pixel Code -->
+    if (window.fbq && META_PIXEL_ID) {
+      fbq('init', META_PIXEL_ID);
+      fbq('track', 'PageView');
+    }
+  </script>
+  <!-- End Meta Pixel Code -->
 
 </head>
 
 <body>
   <noscript>
-  <img height="1" width="1" style="display:none"
-       src="https://www.facebook.com/tr?id=1200423845416419&ev=PageView&noscript=1"/>
-</noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1200423845416419&ev=PageView&noscript=1"/>
+  </noscript>
   <!-- header style one -->
   <header class="header-one header--sticky header-default">
     <div class="header-top-one-wrapper">
@@ -972,309 +972,107 @@
   <script src="assets/js/plugins/calender.js"></script>
   <script src="assets/js/main.js"></script>
 
-<!-- Pixel event bindings + optional CAPI forwarder (safe by default) -->
-<script>
-  // --- Helpers to read Meta identifiers for better matching ---
-  function getCookie(name) {
-    const m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
-    return m ? m.pop() : '';
-  }
-  function getFbp() { return getCookie('_fbp') || ''; }
-  function getFbc() {
-    const url = new URL(window.location.href);
-    const fbclid = url.searchParams.get('fbclid');
-    if (fbclid) return 'fb.1.' + Date.now() + '.' + fbclid;
-    return getCookie('_fbc') || '';
-  }
-
-  // --- Send an event to your backend for Conversions API (token stays hidden on server) ---
-  async function sendCapiEvent(eventName, eventData, eventId) {
-    if (!USE_CAPI) return; // Disabled unless you enable it
-    try {
-      const payload = {
-        event_name: eventName,
-        event_time: Math.floor(Date.now() / 1000),
-        event_source_url: window.location.href,
-        action_source: 'website',
-        event_id: eventId || undefined, // for deduplication with fbq
-        fbp: getFbp(),
-        fbc: getFbc(),
-        user_data: {
-          // If you have email/phone from a form, add raw values here; server should hash them.
-          // em: "user@example.com",
-          // ph: "+5511999999999"
-        },
-        custom_data: eventData || {}
-      };
-
-      if (navigator.sendBeacon) {
-        const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
-        navigator.sendBeacon(CAPI_ENDPOINT, blob);
-      } else {
-        await fetch(CAPI_ENDPOINT, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          keepalive: true,
-          body: JSON.stringify(payload)
-        });
-      }
-    } catch (_) {
-      // quiet fail
+  <!-- Pixel event bindings + optional CAPI forwarder (safe by default) -->
+  <script>
+    // --- Helpers to read Meta identifiers for better matching ---
+    function getCookie(name) {
+      const m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+      return m ? m.pop() : '';
     }
-  }
-
-  // --- Track clicks to Hotmart as InitiateCheckout; buttons as Lead; video opens as ViewContent ---
-  function bindPixelEvents() {
-    if (!window.fbq || !META_PIXEL_ID) return;
-
-    // Hotmart links: InitiateCheckout
-    document.querySelectorAll('a[href*="hotmart.com"]').forEach(function(a){
-      a.addEventListener('click', function(){
-        const id = 'ic_' + Date.now();
-        fbq('track', 'InitiateCheckout', {}, { eventID: id });
-        sendCapiEvent('InitiateCheckout', {}, id);
-      }, { passive: true });
-    });
-
-    // CTA buttons: Lead
-    const ctaSelector = 'a.rts-btn, .pricing-btn, .btn-primary, .btn-primary2';
-    document.querySelectorAll(ctaSelector).forEach(function(btn){
-      btn.addEventListener('click', function(){
-        const id = 'lead_' + Date.now();
-        fbq('track', 'Lead', {}, { eventID: id });
-        sendCapiEvent('Lead', {}, id);
-      }, { passive: true });
-    });
-
-    // Video opens: ViewContent
-    document.querySelectorAll('a.popup-video').forEach(function(v){
-      v.addEventListener('click', function(){
-        const id = 'vc_' + Date.now();
-        fbq('track', 'ViewContent', { content_name: 'Video Play' }, { eventID: id });
-        sendCapiEvent('ViewContent', { content_name: 'Video Play' }, id);
-      }, { passive: true });
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bindPixelEvents);
-  } else {
-    bindPixelEvents();
-  }
-
-  // --- Optional: SPA route change support (fires PageView on history navigation) ---
-  (function enableSpaPageViews(){
-    if (!window.fbq) return;
-    const _pushState = history.pushState;
-    const _replaceState = history.replaceState;
-    function firePV(){ fbq('track', 'PageView'); }
-    history.pushState = function(){ _pushState.apply(this, arguments); firePV(); };
-    history.replaceState = function(){ _replaceState.apply(this, arguments); firePV(); };
-    window.addEventListener('popstate', firePV);
-  })();
-</script>
-<!-- Pixel event bindings + optional CAPI forwarder (safe by default) -->
-<script>
-  // --- Helpers to read Meta identifiers for better matching ---
-  function getCookie(name) {
-    const m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
-    return m ? m.pop() : '';
-  }
-  function getFbp() { return getCookie('_fbp') || ''; }
-  function getFbc() {
-    const url = new URL(window.location.href);
-    const fbclid = url.searchParams.get('fbclid');
-    if (fbclid) return 'fb.1.' + Date.now() + '.' + fbclid;
-    return getCookie('_fbc') || '';
-  }
-
-  // --- Send an event to your backend for Conversions API (token stays hidden on server) ---
-  async function sendCapiEvent(eventName, eventData, eventId) {
-    if (!USE_CAPI) return; // Disabled unless you enable it
-    try {
-      const payload = {
-        event_name: eventName,
-        event_time: Math.floor(Date.now() / 1000),
-        event_source_url: window.location.href,
-        action_source: 'website',
-        event_id: eventId || undefined, // for deduplication with fbq
-        fbp: getFbp(),
-        fbc: getFbc(),
-        user_data: {
-          // If you have email/phone from a form, add raw values here; server should hash them.
-          // em: "user@example.com",
-          // ph: "+5511999999999"
-        },
-        custom_data: eventData || {}
-      };
-
-      if (navigator.sendBeacon) {
-        const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
-        navigator.sendBeacon(CAPI_ENDPOINT, blob);
-      } else {
-        await fetch(CAPI_ENDPOINT, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          keepalive: true,
-          body: JSON.stringify(payload)
-        });
-      }
-    } catch (_) {
-      // quiet fail
+    function getFbp() { return getCookie('_fbp') || ''; }
+    function getFbc() {
+      const url = new URL(window.location.href);
+      const fbclid = url.searchParams.get('fbclid');
+      if (fbclid) return 'fb.1.' + Date.now() + '.' + fbclid;
+      return getCookie('_fbc') || '';
     }
-  }
 
-  // --- Track clicks to Hotmart as InitiateCheckout; buttons as Lead; video opens as ViewContent ---
-  function bindPixelEvents() {
-    if (!window.fbq || !META_PIXEL_ID) return;
+    // --- Send an event to your backend for Conversions API (token stays hidden on server) ---
+    async function sendCapiEvent(eventName, eventData, eventId) {
+      if (!USE_CAPI) return; // Disabled unless you enable it
+      try {
+        const payload = {
+          event_name: eventName,
+          event_time: Math.floor(Date.now() / 1000),
+          event_source_url: window.location.href,
+          action_source: 'website',
+          event_id: eventId || undefined, // for deduplication with fbq
+          fbp: getFbp(),
+          fbc: getFbc(),
+          user_data: {
+            // If you have email/phone from a form, add raw values here; server should hash them.
+            // em: "user@example.com",
+            // ph: "+5511999999999"
+          },
+          custom_data: eventData || {}
+        };
 
-    // Hotmart links: InitiateCheckout
-    document.querySelectorAll('a[href*="hotmart.com"]').forEach(function(a){
-      a.addEventListener('click', function(){
-        const id = 'ic_' + Date.now();
-        fbq('track', 'InitiateCheckout', {}, { eventID: id });
-        sendCapiEvent('InitiateCheckout', {}, id);
-      }, { passive: true });
-    });
-
-    // CTA buttons: Lead
-    const ctaSelector = 'a.rts-btn, .pricing-btn, .btn-primary, .btn-primary2';
-    document.querySelectorAll(ctaSelector).forEach(function(btn){
-      btn.addEventListener('click', function(){
-        const id = 'lead_' + Date.now();
-        fbq('track', 'Lead', {}, { eventID: id });
-        sendCapiEvent('Lead', {}, id);
-      }, { passive: true });
-    });
-
-    // Video opens: ViewContent
-    document.querySelectorAll('a.popup-video').forEach(function(v){
-      v.addEventListener('click', function(){
-        const id = 'vc_' + Date.now();
-        fbq('track', 'ViewContent', { content_name: 'Video Play' }, { eventID: id });
-        sendCapiEvent('ViewContent', { content_name: 'Video Play' }, id);
-      }, { passive: true });
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bindPixelEvents);
-  } else {
-    bindPixelEvents();
-  }
-
-  // --- Optional: SPA route change support (fires PageView on history navigation) ---
-  (function enableSpaPageViews(){
-    if (!window.fbq) return;
-    const _pushState = history.pushState;
-    const _replaceState = history.replaceState;
-    function firePV(){ fbq('track', 'PageView'); }
-    history.pushState = function(){ _pushState.apply(this, arguments); firePV(); };
-    history.replaceState = function(){ _replaceState.apply(this, arguments); firePV(); };
-    window.addEventListener('popstate', firePV);
-  })();
-</script>
-<!-- Pixel event bindings + optional CAPI forwarder (safe by default) -->
-<script>
-  // --- Helpers to read Meta identifiers for better matching ---
-  function getCookie(name) {
-    const m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
-    return m ? m.pop() : '';
-  }
-  function getFbp() { return getCookie('_fbp') || ''; }
-  function getFbc() {
-    const url = new URL(window.location.href);
-    const fbclid = url.searchParams.get('fbclid');
-    if (fbclid) return 'fb.1.' + Date.now() + '.' + fbclid;
-    return getCookie('_fbc') || '';
-  }
-
-  // --- Send an event to your backend for Conversions API (token stays hidden on server) ---
-  async function sendCapiEvent(eventName, eventData, eventId) {
-    if (!USE_CAPI) return; // Disabled unless you enable it
-    try {
-      const payload = {
-        event_name: eventName,
-        event_time: Math.floor(Date.now() / 1000),
-        event_source_url: window.location.href,
-        action_source: 'website',
-        event_id: eventId || undefined, // for deduplication with fbq
-        fbp: getFbp(),
-        fbc: getFbc(),
-        user_data: {
-          // If you have email/phone from a form, add raw values here; server should hash them.
-          // em: "user@example.com",
-          // ph: "+5511999999999"
-        },
-        custom_data: eventData || {}
-      };
-
-      if (navigator.sendBeacon) {
-        const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
-        navigator.sendBeacon(CAPI_ENDPOINT, blob);
-      } else {
-        await fetch(CAPI_ENDPOINT, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          keepalive: true,
-          body: JSON.stringify(payload)
-        });
+        if (navigator.sendBeacon) {
+          const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
+          navigator.sendBeacon(CAPI_ENDPOINT, blob);
+        } else {
+          await fetch(CAPI_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            keepalive: true,
+            body: JSON.stringify(payload)
+          });
+        }
+      } catch (_) {
+        // quiet fail
       }
-    } catch (_) {
-      // quiet fail
     }
-  }
 
-  // --- Track clicks to Hotmart as InitiateCheckout; buttons as Lead; video opens as ViewContent ---
-  function bindPixelEvents() {
-    if (!window.fbq || !META_PIXEL_ID) return;
+    // --- Track clicks to Hotmart as InitiateCheckout; buttons as Lead; video opens as ViewContent ---
+    function bindPixelEvents() {
+      if (!window.fbq || !META_PIXEL_ID) return;
 
-    // Hotmart links: InitiateCheckout
-    document.querySelectorAll('a[href*="hotmart.com"]').forEach(function(a){
-      a.addEventListener('click', function(){
-        const id = 'ic_' + Date.now();
-        fbq('track', 'InitiateCheckout', {}, { eventID: id });
-        sendCapiEvent('InitiateCheckout', {}, id);
-      }, { passive: true });
-    });
+      // Hotmart links: InitiateCheckout
+      document.querySelectorAll('a[href*="hotmart.com"]').forEach(function(a){
+        a.addEventListener('click', function(){
+          const id = 'ic_' + Date.now();
+          fbq('track', 'InitiateCheckout', {}, { eventID: id });
+          sendCapiEvent('InitiateCheckout', {}, id);
+        }, { passive: true });
+      });
 
-    // CTA buttons: Lead
-    const ctaSelector = 'a.rts-btn, .pricing-btn, .btn-primary, .btn-primary2';
-    document.querySelectorAll(ctaSelector).forEach(function(btn){
-      btn.addEventListener('click', function(){
-        const id = 'lead_' + Date.now();
-        fbq('track', 'Lead', {}, { eventID: id });
-        sendCapiEvent('Lead', {}, id);
-      }, { passive: true });
-    });
+      // CTA buttons: Lead
+      const ctaSelector = 'a.rts-btn, .pricing-btn, .btn-primary, .btn-primary2';
+      document.querySelectorAll(ctaSelector).forEach(function(btn){
+        btn.addEventListener('click', function(){
+          const id = 'lead_' + Date.now();
+          fbq('track', 'Lead', {}, { eventID: id });
+          sendCapiEvent('Lead', {}, id);
+        }, { passive: true });
+      });
 
-    // Video opens: ViewContent
-    document.querySelectorAll('a.popup-video').forEach(function(v){
-      v.addEventListener('click', function(){
-        const id = 'vc_' + Date.now();
-        fbq('track', 'ViewContent', { content_name: 'Video Play' }, { eventID: id });
-        sendCapiEvent('ViewContent', { content_name: 'Video Play' }, id);
-      }, { passive: true });
-    });
-  }
+      // Video opens: ViewContent
+      document.querySelectorAll('a.popup-video').forEach(function(v){
+        v.addEventListener('click', function(){
+          const id = 'vc_' + Date.now();
+          fbq('track', 'ViewContent', { content_name: 'Video Play' }, { eventID: id });
+          sendCapiEvent('ViewContent', { content_name: 'Video Play' }, id);
+        }, { passive: true });
+      });
+    }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bindPixelEvents);
-  } else {
-    bindPixelEvents();
-  }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', bindPixelEvents);
+    } else {
+      bindPixelEvents();
+    }
 
-  // --- Optional: SPA route change support (fires PageView on history navigation) ---
-  (function enableSpaPageViews(){
-    if (!window.fbq) return;
-    const _pushState = history.pushState;
-    const _replaceState = history.replaceState;
-    function firePV(){ fbq('track', 'PageView'); }
-    history.pushState = function(){ _pushState.apply(this, arguments); firePV(); };
-    history.replaceState = function(){ _replaceState.apply(this, arguments); firePV(); };
-    window.addEventListener('popstate', firePV);
-  })();
-</script>
+    // --- Optional: SPA route change support (fires PageView on history navigation) ---
+    (function enableSpaPageViews(){
+      if (!window.fbq) return;
+      const _pushState = history.pushState;
+      const _replaceState = history.replaceState;
+      function firePV(){ fbq('track', 'PageView'); }
+      history.pushState = function(){ _pushState.apply(this, arguments); firePV(); };
+      history.replaceState = function(){ _replaceState.apply(this, arguments); firePV(); };
+      window.addEventListener('popstate', firePV);
+    })();
+  </script>
 
 </body>
 </html>
